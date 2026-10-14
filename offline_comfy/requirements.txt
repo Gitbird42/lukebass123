@@ -1,0 +1,9 @@
+torch
+diffusers>=0.30
+transformers
+accelerate
+safetensors
+torchsde
+pillow
+numpy
+huggingface_hub

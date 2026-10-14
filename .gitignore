@@ -1,0 +1,6 @@
+offline_comfy/.venv/
+offline_comfy/wheelhouse/
+offline_comfy/output/
+offline_comfy/models/checkpoints/*
+offline_comfy/models/configs/*
+__pycache__/
