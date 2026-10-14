@@ -40,11 +40,22 @@ def main(argv=None):
             p.add_argument("--device", help="cuda / cpu (default: auto)")
             p.add_argument("--quiet", action="store_true")
     sub.add_parser("list-nodes")
+    sv = sub.add_parser("serve", help="start the local web platform")
+    sv.add_argument("--host", default="127.0.0.1")
+    sv.add_argument("--port", type=int, default=8188)
+    sv.add_argument("--models-dir")
+    sv.add_argument("--output-dir")
+    sv.add_argument("--device")
     a = ap.parse_args(argv)
 
     if a.cmd == "list-nodes":
         for t in sorted(REGISTRY):
             print(t)
+        return 0
+
+    if a.cmd == "serve":
+        from .server import serve
+        serve(a.host, a.port, models_dir=a.models_dir, output_dir=a.output_dir, device=a.device)
         return 0
 
     nodes = load_workflow(a.workflow, REGISTRY)

@@ -1,0 +1,23 @@
+name: build-windows
+on:
+  workflow_dispatch:
+    inputs:
+      torch_index:
+        description: "PyTorch wheel index (cpu or cu121)"
+        default: cu121
+jobs:
+  exe:
+    runs-on: windows-latest
+    defaults: {run: {working-directory: offline_comfy}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install torch --index-url https://download.pytorch.org/whl/${{ inputs.torch_index }}
+      - run: pip install -r requirements.txt pyinstaller
+      - run: python -m unittest discover -s tests
+      - run: pyinstaller packaging/offline_flow.spec --noconfirm
+      - run: choco install innosetup -y
+      - run: iscc packaging\installer.iss
+      - uses: actions/upload-artifact@v4
+        with: {name: OfflineFlow-Setup, path: offline_comfy/dist/OfflineFlow-Setup.exe}

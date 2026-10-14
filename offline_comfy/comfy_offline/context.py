@@ -1,7 +1,9 @@
 import os
 import sys
 
-HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FROZEN = getattr(sys, "frozen", False)
+BUNDLE = getattr(sys, "_MEIPASS", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # read-only app files
+HERE = os.path.dirname(sys.executable) if FROZEN else BUNDLE  # your data: models, output, saved copies
 
 
 class Context:

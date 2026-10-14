@@ -4,3 +4,5 @@ offline_comfy/output/
 offline_comfy/models/checkpoints/*
 offline_comfy/models/configs/*
 __pycache__/
+dist/
+build/

@@ -22,7 +22,21 @@ If you un-bypass them the engine stops with a clear "not implemented" error.
 2. Offline box: `./setup_ubuntu.sh --offline`.
 3. Copy `dreamshaper_8.safetensors` into `models/checkpoints/`.
 
-## Use
+## Platform (recommended)
+    python -m comfy_offline serve        # opens http://127.0.0.1:8188, local only
+**Simple view**: type what you want, pick a shape, press Generate. **Advanced view**: the full node graph
+(pan with drag, zoom with wheel) with editable widgets. *Save as copy* always writes a new file into
+`user_workflows/` - built-in workflows are never modified.
+
+## Windows .exe (sellable, offline)
+Build on Windows (or run the `build-windows` GitHub Action, which produces `OfflineFlow-Setup.exe`):
+    pip install -r requirements.txt pyinstaller
+    pyinstaller packaging/offline_flow.spec --noconfirm   # -> dist/OfflineFlow/OfflineFlow.exe
+    iscc packaging\installer.iss                          # -> dist/OfflineFlow-Setup.exe
+Models go in `models\checkpoints` next to the exe. Read `THIRD_PARTY.md` before selling.
+The exe build is **not tested yet** (no Windows here) - expect a round or two of PyInstaller fixes.
+
+## CLI
     python -m comfy_offline check workflows/logo_flow.json     # validate, no torch needed
     python -m comfy_offline run   workflows/logo_flow.json
     python -m comfy_offline run   workflows/logo_flow.json --randomize-seeds --set 2.text="..." 
