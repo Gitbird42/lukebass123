@@ -19,5 +19,6 @@ each new idea starts as a fresh copy of the one before.
 | v12 | `bruce-calculator-v12/` | https://claude.ai/artifact/8NLNC72yxGqqGKd9hKTMmK | Always-on coach (SPRAY IN / HOLD / LET GO / STEER), pulsing buttons, Day one with Bruce tutorial, training glow and job-sheet hints |
 | v13 | `bruce-calculator-v13/` | https://claude.ai/artifact/9124QENynmrov5vUCafrpn | Quick calls no longer stop the game: small card, answer on the move, Bruce's note fades out |
 | v14 | `bruce-calculator-v14/` | https://claude.ai/artifact/HvtMSuzpjp1umvueNFwaYj | Awesome reseal: golden-hour flyover, work site (flaggers, signs, roller, sweeper, TMA truck with arrow board), no job sheet, DOT set-out at speed, white run then yellow run, traffic queue with toots, finish cinematic; new Gun view camera and gun markers |
+| v15 | `bruce-calculator-v15/` | LINK | Hino 300 line truck built to Hino NZ spec-sheet dimensions, in-cab simulator view (turning wheel, speedo/tacho off the real gear ratios, line-marking control box, live right mirror on the gun), front sighting pointer, rig choice |
 
 Links are private until shared from each page's Share menu.
