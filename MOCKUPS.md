@@ -15,6 +15,6 @@ each new idea starts as a fresh copy of the one before.
 | v8 | `bruce-calculator-v8/` | https://claude.ai/artifact/9VJckaGy2pk3AtPXaJAKqW | Fair PERFECT for a clean re-mark, timing strip, faded old lines, optional latch (one tap = exactly 3 m), TAP EARLIER/LATER hints |
 | v9 | `bruce-calculator-v9/` | https://claude.ai/artifact/YNg1bkqLLBJYWZYMZXyffR | Job board, quick calls with Bruce says cards, Reseal · crest knowledge job (pre-mark tabs, yellow gun, 5 advance-warning stripes + no-passing line), stars need every rule right |
 | v10 | `bruce-calculator-v10/` | https://claude.ai/artifact/JXV7tqhrHye4x95J4ssVci | Reseal pattern set out with spray spots (start/end of every dash and yellow piece) |
-| v11 | `bruce-calculator-v11/` | LINK | Strategy + set-out: job sheet with live sketch, measuring-wheel set-out run (SPOT/UNDO), paint to your own spots with your skip timer, inspector's audit, 8 researched quick calls on the re-mark |
+| v11 | `bruce-calculator-v11/` | https://claude.ai/artifact/UMvFS3VqTFQWpENzWC5kz3 | Strategy + set-out: job sheet with live sketch, measuring-wheel set-out run (SPOT/UNDO), paint to your own spots with your skip timer, inspector's audit, 8 researched quick calls on the re-mark |
 
 Links are private until shared from each page's Share menu.
