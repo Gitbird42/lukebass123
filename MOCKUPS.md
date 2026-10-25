@@ -1,0 +1,13 @@
+# Bruce's Clipboard Calculator: early mock-ups
+
+Every version is kept as its own folder and its own link. Nothing is overwritten;
+each new idea starts as a fresh copy of the one before.
+
+| Version | Folder | Link | What's new |
+|---|---|---|---|
+| v1 | `bruce-calculator/` | https://claude.ai/artifact/A6D3PLCR63xMDDasDFFxGu | First deli No.9259 calculator, paint & bead calc, secret codes, 2D games |
+| v2 | `bruce-calculator-v2/` | https://claude.ai/artifact/3UxC7Tzak9Mm1t9gZXvKrD | 3D Line Painter (code 662), clipboard styled like the real one |
+| v3 | `bruce-calculator-v3/` | https://claude.ai/artifact/9NDkriRKavfX2h8nexQubE | NY662 ute rebuilt from the 1980s side photo |
+| v4 | `bruce-calculator-v4/` | https://claude.ai/artifact/E7r8J1SYziek8H49tr3ZRa | Ute holds its line, auto skip-line gun (3 m on / 7 m off) |
+
+Links are private until shared from each page's Share menu.
