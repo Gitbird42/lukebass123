@@ -1,0 +1,548 @@
+[
+  {
+    "question": "What is the minimum roadway width on which an RCA may legally mark a centre line?",
+    "options": [
+      "4.5 m",
+      "5.1 m",
+      "5.5 m",
+      "6.0 m"
+    ],
+    "correct": 1,
+    "why": "TCD Rule cl 7.2 allows a centre line on roadways 5.1 m or wider; 5.5 m is only the desirable width.",
+    "rule_id": "cl-legal-min-seal",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "For a whole rural route, above what AADT should a dashed centre line normally be marked?",
+    "options": [
+      "100 vpd",
+      "250 vpd",
+      "500 vpd",
+      "750 vpd"
+    ],
+    "correct": 1,
+    "why": "TCD Table 2-5 gives 250 vpd for a total route (100 vpd for isolated sections).",
+    "rule_id": "cl-rural-warrant",
+    "confidence": "single-source"
+  },
+  {
+    "question": "What colour and minimum width is a standard centre line?",
+    "options": [
+      "Yellow, 100 mm",
+      "White, 100 mm",
+      "White, 150 mm",
+      "Yellow, 150 mm"
+    ],
+    "correct": 1,
+    "why": "The Rule requires a white broken or continuous line at least 100 mm wide.",
+    "rule_id": "cl-colour-width",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "What is the stripe and gap for a standard broken centre line?",
+    "options": [
+      "3 m stripe, 7 m gap",
+      "1 m stripe, 3 m gap",
+      "3 m stripe, 9 m gap",
+      "13 m stripe, 7 m gap"
+    ],
+    "correct": 0,
+    "why": "MOTSAM gives a 3 m stripe and a 7 m gap, which is a 10 m cycle.",
+    "rule_id": "cl-dash-gap",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "A no-passing line must be:",
+    "options": [
+      "A broken yellow line at least 100 mm wide",
+      "A continuous yellow line at least 100 mm wide",
+      "A continuous white line at least 150 mm wide",
+      "A continuous yellow line at least 75 mm wide"
+    ],
+    "correct": 1,
+    "why": "TCD Rule cl 7.3(2) requires a continuous yellow line at least 100 mm wide.",
+    "rule_id": "np-colour-width",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "What is the nominal offset between a no-passing line and the centre line?",
+    "options": [
+      "50 mm",
+      "100 mm",
+      "200 mm",
+      "500 mm"
+    ],
+    "correct": 1,
+    "why": "Both the TCD Manual and MOTSAM say nominally 100 mm.",
+    "rule_id": "np-offset",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "What are the minimum no-passing line lengths on two-lane roads?",
+    "options": [
+      "80 m rural, 30 m urban",
+      "100 m rural, 60 m urban",
+      "60 m rural, 30 m urban",
+      "150 m rural, 80 m urban"
+    ],
+    "correct": 0,
+    "why": "TCD Table 2-15 and MOTSAM both give 80 m rural and 30 m urban.",
+    "rule_id": "np-min-length",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "On a rural road, below what centre-line visibility is a no-passing line warranted (if the restricted stretch is over 80 m)?",
+    "options": [
+      "165 m",
+      "250 m",
+      "330 m",
+      "450 m"
+    ],
+    "correct": 2,
+    "why": "TCD Table 2-16 uses 330 m rural and 165 m urban.",
+    "rule_id": "np-sight-distance",
+    "confidence": "single-source"
+  },
+  {
+    "question": "What RRPMs go with a no-passing line, and how far apart?",
+    "options": [
+      "White, 20 m",
+      "Yellow, 10 m",
+      "Yellow, 20 m",
+      "Red, 10 m"
+    ],
+    "correct": 1,
+    "why": "No-passing lines get yellow Category G RRPMs at a nominal 10 m spacing.",
+    "rule_id": "np-rrpm",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "Under the Rule, what is the longest an advance-warning dash may be?",
+    "options": [
+      "10 m",
+      "13 m",
+      "15 m",
+      "20 m"
+    ],
+    "correct": 2,
+    "why": "The Rule caps each yellow advance-warning dash at 15 m; the TCD Manual uses 13 m.",
+    "rule_id": "np-aw-legal",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "What stripe and gap does the TCD Manual give for no-passing advance-warning lines?",
+    "options": [
+      "3 m / 7 m",
+      "10 m / 10 m",
+      "13 m / 7 m",
+      "15 m / 5 m"
+    ],
+    "correct": 2,
+    "why": "TCD Table 2-17 gives 13 m stripes with 7 m gaps (a 20 m cycle).",
+    "rule_id": "nopass-aw-pattern",
+    "confidence": "single-source"
+  },
+  {
+    "question": "How many advance-warning stripes are marked on a rural road?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "correct": 2,
+    "why": "TCD Table 2-17 gives 5 stripes rural and 3 urban.",
+    "rule_id": "nopass-aw-count",
+    "confidence": "single-source"
+  },
+  {
+    "question": "How far before an urban no-passing line does the advance-warning line start?",
+    "options": [
+      "30 m",
+      "60 m",
+      "80 m",
+      "100 m"
+    ],
+    "correct": 1,
+    "why": "Urban is 60 m (3 x 20 m); rural is 100 m (5 x 20 m).",
+    "rule_id": "nopass-aw-leadin",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "Which side of the centre line is the advance-warning line marked on?",
+    "options": [
+      "On the right of the centre line",
+      "On the left of the centre line",
+      "Directly over the centre line",
+      "Either side, at the RCA's choice"
+    ],
+    "correct": 1,
+    "why": "The TCD Manual places the advance-warning line to the left of the centre line.",
+    "rule_id": "nopass-aw-position",
+    "confidence": "single-source"
+  },
+  {
+    "question": "What is the standard lane line pattern on multi-lane roads?",
+    "options": [
+      "White, 100 mm, 3 m stripe / 7 m gap",
+      "White, 200 mm, 1 m stripe / 3 m gap",
+      "Yellow, 100 mm, 3 m stripe / 7 m gap",
+      "White, 100 mm, continuous"
+    ],
+    "correct": 0,
+    "why": "TCD Table 2-28 gives reflectorised white, at least 100 mm, 3 m stripe and 7 m gap.",
+    "rule_id": "lane-line",
+    "confidence": "single-source"
+  },
+  {
+    "question": "What is the minimum width of a standard edge line?",
+    "options": [
+      "75 mm",
+      "100 mm",
+      "150 mm",
+      "200 mm"
+    ],
+    "correct": 1,
+    "why": "Standard edge lines are at least 100 mm; wide edge lines are 150 or 200 mm.",
+    "rule_id": "edge-width",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "On a two-lane rural state highway, edge lines should be marked where the seal is at least:",
+    "options": [
+      "5.5 m",
+      "6.0 m",
+      "7.4 m",
+      "8.5 m"
+    ],
+    "correct": 2,
+    "why": "The TCD Manual warrant is 7.4 m, or 6.6 m with AADT over 750.",
+    "rule_id": "edge-warrant",
+    "confidence": "single-source"
+  },
+  {
+    "question": "What is the stripe and gap of a continuity line?",
+    "options": [
+      "1 m / 3 m",
+      "3 m / 7 m",
+      "2 m / 2 m",
+      "1 m / 1 m"
+    ],
+    "correct": 0,
+    "why": "Continuity lines are 1 m stripes with 3 m gaps.",
+    "rule_id": "continuity-pattern",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "What is the allowed spacing between the two lines of a wide centre line?",
+    "options": [
+      "100-300 mm",
+      "0.5-1.5 m",
+      "1.0-2.5 m",
+      "1.5-3.5 m"
+    ],
+    "correct": 1,
+    "why": "TCD Rule cl 7.2A (2013) sets 0.5 m to 1.5 m.",
+    "rule_id": "wcl-spacing",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "What line pattern does a standard white wide centre line use?",
+    "options": [
+      "Continuous",
+      "1 m line, 3 m gap",
+      "3 m line, 7 m gap",
+      "13 m line, 7 m gap"
+    ],
+    "correct": 2,
+    "why": "TCD Table 2-7 gives 3 m lines with 7 m gaps (yellow wide centre lines are continuous).",
+    "rule_id": "wcl-pattern",
+    "confidence": "single-source"
+  },
+  {
+    "question": "What colour are flush median markings?",
+    "options": [
+      "Yellow",
+      "White",
+      "Yellow borders with white diagonals",
+      "White borders with yellow diagonals"
+    ],
+    "correct": 1,
+    "why": "The Rule defines a flush median as white diagonals inside white border lines.",
+    "rule_id": "fm-colour",
+    "confidence": "single-source"
+  },
+  {
+    "question": "What is the maximum total width of a flush median?",
+    "options": [
+      "2.5 m",
+      "3.0 m",
+      "3.5 m",
+      "4.5 m"
+    ],
+    "correct": 2,
+    "why": "The TCD Manual gives 1.0 m minimum, 2.5 m desirable and 3.5 m maximum.",
+    "rule_id": "fm-width",
+    "confidence": "single-source"
+  },
+  {
+    "question": "How do flush median diagonal bars meet the border line?",
+    "options": [
+      "With a 100 mm gap",
+      "With a 300 mm gap",
+      "They join directly with no gap",
+      "They stop 1 m short"
+    ],
+    "correct": 2,
+    "why": "The TCD Manual says the diagonals join directly into the border line.",
+    "rule_id": "fm-border",
+    "confidence": "single-source"
+  },
+  {
+    "question": "What RRPMs may be used on a flush median?",
+    "options": [
+      "Yellow one-way",
+      "White two-way only",
+      "Red and white",
+      "Blue"
+    ],
+    "correct": 1,
+    "why": "Only white two-way RRPMs are used on flush medians.",
+    "rule_id": "fm-rrpm",
+    "confidence": "single-source"
+  },
+  {
+    "question": "Since February 2005, what limit line is required on a controlled intersection approach?",
+    "options": [
+      "A single 300 mm continuous line",
+      "Two 100 mm lines",
+      "A 200 mm broken line",
+      "A single 150 mm continuous line"
+    ],
+    "correct": 0,
+    "why": "MOTSAM 3.06 requires a single 300 mm continuous limit line from 27 February 2005.",
+    "rule_id": "limit-line-width",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "What colour is the limit line at a STOP sign?",
+    "options": [
+      "White",
+      "Yellow",
+      "Red",
+      "Either, at the RCA's choice"
+    ],
+    "correct": 1,
+    "why": "STOP limit lines are yellow; give-way, roundabout and signal limit lines are white.",
+    "rule_id": "limit-line-colour",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "What legal effect does a holding line at a one-lane bridge have?",
+    "options": [
+      "Same as a stop limit line",
+      "Same as a give-way limit line",
+      "None; it only shows where to stop",
+      "It bans overtaking"
+    ],
+    "correct": 2,
+    "why": "The TCD Manual says holding lines have no legal significance.",
+    "rule_id": "holding-line",
+    "confidence": "single-source"
+  },
+  {
+    "question": "On a new zebra crossing, what bar and gap widths are used?",
+    "options": [
+      "300 mm bars / 600 mm gaps",
+      "450 mm bars / 450 mm gaps",
+      "600 mm bars / 600 mm gaps",
+      "500 mm bars / 500 mm gaps"
+    ],
+    "correct": 2,
+    "why": "Gazette notice 2021-au89 set M1-1.3 at 600 x 600 mm for new or resealed crossings.",
+    "rule_id": "zebra-new-format",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "Remarking an old 300 x 600 mm zebra for maintenance, which format should you use?",
+    "options": [
+      "Keep 300 x 600",
+      "Interim 450 x 450",
+      "New 600 x 600",
+      "Any of these"
+    ],
+    "correct": 1,
+    "why": "The 2021 Gazette notice says maintenance remarking of M1-1 crossings uses the interim M1-1.2 (450 x 450 mm).",
+    "rule_id": "zebra-interim",
+    "confidence": "single-source"
+  },
+  {
+    "question": "What is the minimum zebra bar length?",
+    "options": [
+      "1.5 m",
+      "2.0 m",
+      "3.0 m",
+      "4.0 m"
+    ],
+    "correct": 1,
+    "why": "Bars are at least 2.0 m long.",
+    "rule_id": "zebra-bar-length",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "Where do white RRPMs go on a normal centre line, and at what nominal spacing?",
+    "options": [
+      "In every gap, 10 m",
+      "In every second gap, 20 m",
+      "On every stripe, 10 m",
+      "Every 40 m"
+    ],
+    "correct": 1,
+    "why": "NZTA P/14 puts them centrally in every second gap, a nominal 20 m.",
+    "rule_id": "rrpm-centreline",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "How close to its specified location must an RRPM be installed?",
+    "options": [
+      "10 mm",
+      "50 mm",
+      "100 mm",
+      "200 mm"
+    ],
+    "correct": 1,
+    "why": "The installation spec says within 50 mm.",
+    "rule_id": "rrpm-tolerance",
+    "confidence": "single-source"
+  },
+  {
+    "question": "What is the minimum initial skid resistance for paint markings?",
+    "options": [
+      "30 BPN",
+      "45 BPN",
+      "55 BPN",
+      "65 BPN"
+    ],
+    "correct": 1,
+    "why": "P/22 and M7 require at least 45 BPN for markings under 0.9 mm dry film.",
+    "rule_id": "mat-skid-paint",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "What skid range applies to markings 0.9 mm or thicker (for example thermoplastic)?",
+    "options": [
+      "Over 45 BPN",
+      "50-65 BPN",
+      "30-45 BPN",
+      "Over 70 BPN"
+    ],
+    "correct": 1,
+    "why": "P/22 and M/20 require 50-65 BPN.",
+    "rule_id": "mat-skid-thick",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "At which dry film thicknesses are M7 paints tested and approved?",
+    "options": [
+      "100/150/200 microns",
+      "180/220/300 microns",
+      "250/350/450 microns",
+      "300/400/500 microns"
+    ],
+    "correct": 1,
+    "why": "M7 approvals are recorded at 180, 220 or 300 microns dry.",
+    "rule_id": "mat-dft-tiers",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "Thermoplastic must not be applied when the surface is colder than:",
+    "options": [
+      "0 deg C",
+      "5 deg C",
+      "10 deg C",
+      "15 deg C"
+    ],
+    "correct": 1,
+    "why": "P/22 bars thermoplastic below a 5 deg C surface or where moisture is present.",
+    "rule_id": "weather-surface",
+    "confidence": "single-source"
+  },
+  {
+    "question": "Per NZRF guidance, paint should go down when temperature and humidity are:",
+    "options": [
+      "5 deg C+ and RH under 95%",
+      "10 deg C and rising, RH 85% and falling",
+      "15 deg C+ at any RH",
+      "Any temperature if the road is dry"
+    ],
+    "correct": 1,
+    "why": "The NZRF guide gives 10 deg C and rising, 85% RH and falling, and no dew expected within 2 hours.",
+    "rule_id": "weather-paint",
+    "confidence": "single-source"
+  },
+  {
+    "question": "Under CoPTTM, what is the only permitted use of a 450 mm cone?",
+    "options": [
+      "Tapers on Level 1 roads",
+      "Protecting wet road markings",
+      "Footpath closures",
+      "Any use below 50 km/h"
+    ],
+    "correct": 1,
+    "why": "450 mm cones are only for delineating and protecting wet markings; all other uses need 900 mm or taller.",
+    "rule_id": "ttm-wet-cone",
+    "confidence": "confirmed"
+  },
+  {
+    "question": "What minimum roll-ahead distance is needed in front of a shadow vehicle?",
+    "options": [
+      "5 m",
+      "10 m",
+      "20 m",
+      "50 m"
+    ],
+    "correct": 1,
+    "why": "CoPTTM Section D requires a minimum 10 m roll-ahead.",
+    "rule_id": "ttm-roll-ahead",
+    "confidence": "single-source"
+  },
+  {
+    "question": "On a Level 2 road, a TMA is required on the shadow vehicle when the mobile operation is:",
+    "options": [
+      "Always",
+      "In the live lane or on the shoulder within 2 m of it",
+      "Only at night",
+      "Only above 80 km/h"
+    ],
+    "correct": 1,
+    "why": "CoPTTM Section D requires a TMA on Level 2 when in the live lane or within 2 m of it; on Level 3, always.",
+    "rule_id": "ttm-tma",
+    "confidence": "single-source"
+  },
+  {
+    "question": "Under CoPTTM, a Level 1 road has an AADT of:",
+    "options": [
+      "Under 500",
+      "500 to 10,000",
+      "Over 10,000",
+      "Over 10,000 and speed over 75 km/h"
+    ],
+    "correct": 1,
+    "why": "CoPTTM: LV under 500, Level 1 500-10,000, Level 2 over 10,000, Level 3 adds speed over 75 km/h on multi-lane roads.",
+    "rule_id": "ttm-road-levels",
+    "confidence": "single-source"
+  },
+  {
+    "question": "From what date did NZTA stop updating CoPTTM?",
+    "options": [
+      "1 April 2023",
+      "1 November 2024",
+      "1 July 2026",
+      "1 July 2028"
+    ],
+    "correct": 1,
+    "why": "NZTA says CoPTTM stays online from 1 November 2024 but is no longer updated or maintained.",
+    "rule_id": "ttm-copttm-frozen",
+    "confidence": "single-source"
+  }
+]

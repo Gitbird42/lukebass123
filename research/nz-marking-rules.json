@@ -1,0 +1,1080 @@
+[
+  {
+    "id": "cl-legal-min-seal",
+    "topic": "Centre lines",
+    "rule": "A road controlling authority may mark a centre line on a roadway that is 5.1 m or more wide.",
+    "values": {
+      "min_roadway_width_m": 5.1
+    },
+    "source_title": "Land Transport Rule: Traffic Control Devices 2004, cl 7.2 (quoted in TCD Manual Part 5, Standard centre-lines)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/standard-centre-lines",
+    "confidence": "confirmed",
+    "notes": "Stated as the Rule (cl 7.2) in two TCD Manual Part 5 pages (standard centre-lines and low-volume roads). Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "cl-rural-warrant",
+    "topic": "Centre lines",
+    "rule": "On sealed rural roads a dashed centre line should normally be marked where the seal is 5.5 m wide (desirable) or at least 5.1 m (minimum) and AADT is over 250 vpd for a whole route, or over 100 vpd for isolated sections.",
+    "values": {
+      "desirable_seal_m": 5.5,
+      "min_seal_m": 5.1,
+      "aadt_total_route": 250,
+      "aadt_isolated_sections": 100
+    },
+    "source_title": "NZTA TCD Manual Part 5, Table 2-5 (Standard centre-lines); repeated in the low-volume roads table",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/standard-centre-lines",
+    "confidence": "single-source",
+    "notes": "Both pages are in the same manual. The AADT figures are guidance, not law. Isolated sections may get a centre line regardless of volume (curves, crash history). The urban warrant was cut off in the snippet. An older MOTSAM text says rural state highways need a centre line when the seal is over 5 m. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "cl-colour-width",
+    "topic": "Centre lines",
+    "rule": "A standard centre line is a white broken or continuous line at least 100 mm wide (raised white pavement markers are a legal alternative).",
+    "values": {
+      "colour": "white",
+      "min_width_mm": 100
+    },
+    "source_title": "TCD Rule cl 7.2 quoted in TCD Manual Part 5; MOTSAM Part 2 Section 2 (2010)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/standard-centre-lines",
+    "confidence": "confirmed",
+    "notes": "Agreed by the TCD Manual quoting the Rule, MOTSAM Part 2 s2.01 and a 2010 NZ Gazette notice that paraphrases cl 7.2. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "cl-dash-gap",
+    "topic": "Centre lines",
+    "rule": "A standard broken centre line is a 3 m stripe followed by a 7 m gap (10 m cycle), reflectorised white.",
+    "values": {
+      "stripe_m": 3,
+      "gap_m": 7,
+      "cycle_m": 10
+    },
+    "source_title": "MOTSAM Part 2 Section 2, cl 2.01 (Aug 2010 update)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/motsam/part-2/docs/motsam-2-section-2.pdf",
+    "confidence": "confirmed",
+    "notes": "In MOTSAM s2.01 and a NZ driving-test resource (drivingtests.co.nz: 100 mm wide, 3 m long, 7 m gap). It also fits the TCD advance-warning geometry: one 13 m stripe spans centre-line stripe + gap + stripe = 3+7+3. The current TCD Manual centre-line table was not seen. No rural/urban or speed-dependent variant was found, so do not assume one exists or does not exist. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "cl-continuous-white",
+    "topic": "Centre lines",
+    "rule": "A continuous white centre line may be used on tight urban curves where the broken line is unsuitable, and in rural areas in special circumstances.",
+    "values": {},
+    "source_title": "MOTSAM Part 2 Section 2 (2010)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/motsam/part-2/docs/motsam-2-section-2.pdf",
+    "confidence": "single-source",
+    "notes": "Older MOTSAM text. Check that the TCD Manual still says this. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "cl-multilane-undivided",
+    "topic": "Centre lines",
+    "rule": "On multi-lane undivided roads the centre line is a yellow no-passing line made of two 100 mm lines 100 mm apart, continuous except at intersections. Where the speed limit is under 70 km/h, a single 150 mm continuous white line may be used instead.",
+    "values": {
+      "lines": 2,
+      "line_width_mm": 100,
+      "separation_mm": 100,
+      "alt_white_width_mm": 150,
+      "alt_speed_below_kmh": 70
+    },
+    "source_title": "NZTA TCD Manual Part 5, multi-lane roads, centre-lines (Table 2-41)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/multi-lane-roads/centre-lines",
+    "confidence": "single-source",
+    "notes": "The table number shows as 2-41 in one snippet and 2-42 in another. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "np-colour-width",
+    "topic": "No-passing lines",
+    "rule": "A no-passing line is a continuous yellow line at least 100 mm wide (the TCD Manual allows it to be increased to 150 mm).",
+    "values": {
+      "colour": "yellow",
+      "min_width_mm": 100,
+      "optional_width_mm": 150,
+      "pattern": "continuous"
+    },
+    "source_title": "TCD Rule cl 7.3(2), as replaced by the 2013 amendment; TCD Manual Part 5 Table 2-11",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-lines",
+    "confidence": "confirmed",
+    "notes": "The Rule wording (quoted in the TCD Manual and the 2013 amendment summary) and TCD Table 2-11 agree. The 150 mm option comes from the TCD table only. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "np-offset",
+    "topic": "No-passing lines",
+    "rule": "A no-passing line is offset a nominal 100 mm from the centre line (or from the RRPM line or the other no-passing line).",
+    "values": {
+      "offset_mm": 100
+    },
+    "source_title": "TCD Manual Part 5 Table 2-11; MOTSAM Part 2 Section 2 (2010)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-lines",
+    "confidence": "confirmed",
+    "notes": "Both sources say 'nominally 100 mm'. The Rule as quoted gives about 100 mm from another line, or 0.5 to 1.5 m for wide centre lines. NZTA P/22 notes that the separation between double yellow lines may go up to 130 mm where RRPMs sit between them. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "np-side",
+    "topic": "No-passing lines",
+    "rule": "A no-passing line applies to traffic travelling on its side of the road, that is, traffic normally to the left of the line.",
+    "values": {},
+    "source_title": "TCD Rule cl 7.3 (quoted in TCD Manual Part 5, No-passing lines)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-lines",
+    "confidence": "single-source",
+    "notes": "The driver's duty is in the Road User Rule 2004: do not pass across the line unless the vehicle stays wholly to the left of it. That was seen only through a forum quote. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "np-min-length",
+    "topic": "No-passing lines",
+    "rule": "A no-passing line should be at least 80 m long on rural two-lane roads and 30 m on urban two-lane roads.",
+    "values": {
+      "rural_min_m": 80,
+      "urban_min_m": 30
+    },
+    "source_title": "TCD Manual Part 5 Table 2-15; MOTSAM Part 2 Section 2 (2010)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-lines",
+    "confidence": "confirmed",
+    "notes": "The current TCD Manual and the 2010 MOTSAM both give 80 m and 30 m. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "np-short-restriction",
+    "topic": "No-passing lines",
+    "rule": "On rural roads, where the restricted-visibility stretch is under 80 m, no no-passing line is marked. Longer restrictions extend the line beyond the restricted section (an 80 m figure is involved).",
+    "values": {
+      "rural_no_marking_below_m": 80
+    },
+    "source_title": "TCD Manual Part 5 Table 2-15",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-lines",
+    "confidence": "unclear",
+    "notes": "The snippets disagree on the extension rule for 80-160 m stretches ('starts 80 m before visibility is lost and continues 80 m past' versus 'extend 80 m beyond the visibility limits'). Read the table itself. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "np-sight-distance",
+    "topic": "No-passing lines",
+    "rule": "A no-passing line is warranted where visibility along the centre line is less than 330 m (rural) or 165 m (urban) over a stretch longer than 80 m (rural) or 30 m (urban). Visibility is measured from a 1.10 m eye height to a 1.25 m object height.",
+    "values": {
+      "rural_visibility_m": 330,
+      "urban_visibility_m": 165,
+      "eye_height_m": 1.1,
+      "object_height_m": 1.25
+    },
+    "source_title": "TCD Manual Part 5 Table 2-16",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-lines",
+    "confidence": "single-source",
+    "notes": "MOTSAM (2010) gives the same 165 m urban figure but used a 1.15 m eye and 1.15 m object height. Rural roads can also be marked by agreement of the RCA, NZTA and Police (for example after crashes). No speed-based (85th percentile) table was found. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "np-rrpm",
+    "topic": "No-passing lines",
+    "rule": "No-passing lines are supplemented with yellow (Category G) RRPMs at a nominal 10 m spacing. The pattern is only broken where the no-passing marking stops at intersections.",
+    "values": {
+      "colour": "yellow",
+      "spacing_m": 10
+    },
+    "source_title": "TCD Manual Part 5 No-passing lines; NZTA SP/SP14 Specification for installation of RRPMs",
+    "source_url": "https://nzta.govt.nz/assets/resources/raised-pvmt-markers-installation/docs/raised-pvmt-markers-installation.pdf",
+    "confidence": "confirmed",
+    "notes": "Yellow at nominal 10 m appears in both the TCD Manual and the P/14 installation spec. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "np-aw-legal",
+    "topic": "No-passing lines",
+    "rule": "Where practicable, a no-passing line must be preceded by an advance-warning line: yellow dashes at least 100 mm wide, each dash no longer than 15 m.",
+    "values": {
+      "min_width_mm": 100,
+      "max_dash_m": 15,
+      "colour": "yellow"
+    },
+    "source_title": "TCD Rule cl 7.3 (quoted in TCD Manual Part 5); NZ Gazette 2010-au8300",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-advance-warning-lines",
+    "confidence": "confirmed",
+    "notes": "Rule text as quoted by the TCD Manual, and paraphrased in the 2010 Gazette trial notice. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "nopass-aw-pattern",
+    "topic": "No-passing lines",
+    "rule": "A no-passing advance-warning line is reflectorised yellow, 100 mm wide, with 13 m stripes and 7 m gaps.",
+    "values": {
+      "stripe_m": 13,
+      "gap_m": 7,
+      "width_mm": 100
+    },
+    "source_title": "TCD Manual Part 5 Table 2-17 (No-passing advance-warning lines)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-advance-warning-lines",
+    "confidence": "single-source",
+    "notes": "Only the TCD table was seen, but it fits everything else: 13 m is under the 15 m legal maximum, and stripe + gap = 20 m = two centre-line cycles (3+7+3 stripe, 7 gap). Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "nopass-aw-count",
+    "topic": "No-passing lines",
+    "rule": "A no-passing advance-warning line has 5 stripes on rural roads and 3 stripes on urban roads.",
+    "values": {
+      "rural_stripes": 5,
+      "urban_stripes": 3
+    },
+    "source_title": "TCD Manual Part 5 Table 2-17",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-advance-warning-lines",
+    "confidence": "single-source",
+    "notes": "Only the TCD table was seen. The arithmetic checks out: 5 x 20 m = 100 m and 3 x 20 m = 60 m, which match the lead-in distances. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "nopass-aw-leadin",
+    "topic": "No-passing lines",
+    "rule": "The advance-warning line starts 100 m before the no-passing line on rural roads and 60 m before it on urban roads.",
+    "values": {
+      "rural_m": 100,
+      "urban_m": 60
+    },
+    "source_title": "TCD Manual Part 5, No-passing advance-warning lines; MOTSAM Part 2 Section 2 (2010)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-advance-warning-lines",
+    "confidence": "confirmed",
+    "notes": "This resolves the 'garbled 100 m / 60 m': 100 m is rural and 60 m is urban. Rural 100 m is in both the TCD Manual and MOTSAM. Urban 60 m is in the TCD Manual and matches 3 stripes x 20 m. One snippet summary said MOTSAM gives 'a single 60 m', so the MOTSAM urban text was not seen cleanly. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "nopass-aw-position",
+    "topic": "No-passing lines",
+    "rule": "The advance-warning line is marked just left of the centre line. Each stripe runs from the start of one centre-line stripe to the far end of the next centre-line stripe.",
+    "values": {},
+    "source_title": "TCD Manual Part 5, No-passing advance-warning lines",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/no-passing-advance-warning-lines",
+    "confidence": "single-source",
+    "notes": "The offset distance for the advance-warning line was not stated in the snippets. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "nopass-aw-multilane",
+    "topic": "No-passing lines",
+    "rule": "Advance-warning lines are not normally used on multi-lane (divided or undivided) roads unless the no-passing line is marked for restricted visibility.",
+    "values": {},
+    "source_title": "TCD Manual Part 5, multi-lane roads, no-passing lines",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/multi-lane-roads/2-14-2-no-passing-lines",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "lane-line",
+    "topic": "Lane, edge and continuity lines",
+    "rule": "Lane lines that separate through traffic on multi-lane roads are reflectorised white, at least 100 mm wide, with a 3 m stripe and a 7 m gap.",
+    "values": {
+      "min_width_mm": 100,
+      "stripe_m": 3,
+      "gap_m": 7
+    },
+    "source_title": "TCD Manual Part 5, Lane lines (Table 2-28; multi-lane Table 2-43)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/lane-lines",
+    "confidence": "single-source",
+    "notes": "Two pages of the same manual. The table gives no urban, rural or motorway split. Motorways have their own treatment (2010 Part 10: high-performance line with ATP and RRPMs). Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "lane-line-solid",
+    "topic": "Lane, edge and continuity lines",
+    "rule": "Lane lines should be marked solid on the approach to controlled intersections and pedestrian crossings.",
+    "values": {},
+    "source_title": "TCD Manual Part 5, Lane lines",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/lane-lines",
+    "confidence": "single-source",
+    "notes": "The solid-length distance was not found. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "edge-width",
+    "topic": "Lane, edge and continuity lines",
+    "rule": "A standard edge line is a continuous white line at least 100 mm wide. Wide edge lines are 150 mm or 200 mm.",
+    "values": {
+      "min_width_mm": 100,
+      "wide_options_mm": [
+        150,
+        200
+      ],
+      "pattern": "continuous"
+    },
+    "source_title": "TCD Manual Part 5 Edgelines; MOTSAM Part 2 Section 2 (2010)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/edge-treatments/edgelines",
+    "confidence": "confirmed",
+    "notes": "Both give 100 mm continuous. Wide edge lines (TCD only) are mainly for rural sites with lane-departure crash history. The Rule wording quoted allows 'a broken or continuous white line, or a kerb' to define the edge. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "edge-warrant",
+    "topic": "Lane, edge and continuity lines",
+    "rule": "Edge lines should be marked on two-lane rural state highways where the seal is at least 7.4 m wide, or at least 6.6 m wide with AADT over 750, or in special conditions such as fog or difficult terrain.",
+    "values": {
+      "seal_m": 7.4,
+      "seal_with_volume_m": 6.6,
+      "aadt": 750
+    },
+    "source_title": "TCD Manual Part 5, Edgelines",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/edge-treatments/edgelines",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "edge-offset",
+    "topic": "Lane, edge and continuity lines",
+    "rule": "The offset of an edge line from the seal edge was not found in the TCD Manual snippets.",
+    "values": {},
+    "source_title": "TCD Manual Part 5, Edgelines",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/edge-treatments/edgelines",
+    "confidence": "unclear",
+    "notes": "Not found. The 2010 motorway section (Part 10) puts the left edge line at least 1.0 m clear of a kerb, barrier or carriageway edge, but that is for motorways only. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "continuity-pattern",
+    "topic": "Lane, edge and continuity lines",
+    "rule": "Continuity lines are reflectorised white with a 1 m stripe and a 3 m gap.",
+    "values": {
+      "stripe_m": 1,
+      "gap_m": 3
+    },
+    "source_title": "TCD Manual Part 5 Passing lanes, markings; TCD Part 10 Section 12 (2010); MOTSAM Part 2 (2010)",
+    "source_url": "https://nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/passing-facilities/passing-lanes/markings",
+    "confidence": "confirmed",
+    "notes": "1 m / 3 m appears in all three. Width varies, see continuity-width. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "continuity-width",
+    "topic": "Lane, edge and continuity lines",
+    "rule": "Continuity lines at passing-lane diverges are 200 mm wide (rural) or 150 mm (urban), and are offset at least 3.5 m from the diverge edge line.",
+    "values": {
+      "rural_width_mm": 200,
+      "urban_width_mm": 150,
+      "min_offset_from_edgeline_m": 3.5
+    },
+    "source_title": "TCD Manual Part 5, Passing lanes, markings",
+    "source_url": "https://nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/passing-facilities/passing-lanes/markings",
+    "confidence": "single-source",
+    "notes": "The motorway Part 10 (2010) says 200 mm. Older MOTSAM auxiliary-lane figures give 100-200 mm. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "atp-dims",
+    "topic": "Lane, edge and continuity lines",
+    "rule": "Audio-tactile profiled (ATP) edge lines are at least 150 mm wide. Profiled centre lines use 200 mm wide ribs at 250 mm intervals on a 100 mm centre line.",
+    "values": {
+      "atp_edge_min_mm": 150,
+      "rib_width_mm": 200,
+      "rib_spacing_mm": 250
+    },
+    "source_title": "TCD Manual Part 5, Audio-tactile profiled roadmarkings",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/audio-tactile-profiled-roadmarkings/centre-lines-and-no-passing-lines",
+    "confidence": "single-source",
+    "notes": "There is also a 2025 NZTA ATPM guidance document that was not read. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "wcl-spacing",
+    "topic": "Wide centre lines and flush medians",
+    "rule": "A wide centre line is two roughly parallel lines, each at least 100 mm wide, spaced between 0.5 m and 1.5 m apart.",
+    "values": {
+      "min_gap_m": 0.5,
+      "max_gap_m": 1.5,
+      "min_line_width_mm": 100
+    },
+    "source_title": "TCD Rule cl 7.2A (Amendment 2013, in force 1 Jan 2014); TCD Manual Part 5 Table 2-7",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/rules/docs/traffic-control-devices-amendment-2013.pdf",
+    "confidence": "confirmed",
+    "notes": "The 2013 Rule amendment, TCD Table 2-7 and the 2010 Gazette trial notice all agree. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "wcl-pattern",
+    "topic": "Wide centre lines and flush medians",
+    "rule": "A standard (white) wide centre line uses 3 m lines with 7 m gaps. A yellow (no-passing) wide centre line is continuous. The minimum length is 80 m.",
+    "values": {
+      "stripe_m": 3,
+      "gap_m": 7,
+      "min_length_m": 80
+    },
+    "source_title": "TCD Manual Part 5 Table 2-7 (Wide centre-lines)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/wide-centre-lines",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "wcl-rrpm",
+    "topic": "Wide centre lines and flush medians",
+    "rule": "On narrower wide centre lines (0.5-1 m spacing), RRPMs and ATP should go on top of, or outside, the marked lines, not between them.",
+    "values": {
+      "applies_spacing_m": [
+        0.5,
+        1.0
+      ]
+    },
+    "source_title": "TCD Manual Part 5, Wide centre-lines",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/wide-centre-lines",
+    "confidence": "single-source",
+    "notes": "Placing them between the lines reduces the perceived widening at night. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "fm-colour",
+    "topic": "Wide centre lines and flush medians",
+    "rule": "A flush median is white diagonal lines along the middle of the road, bounded by roughly parallel white longitudinal lines.",
+    "values": {
+      "colour": "white"
+    },
+    "source_title": "TCD Rule (quoted in TCD Manual Part 5, Flush medians)",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/flush-medians",
+    "confidence": "single-source",
+    "notes": "Yellow is not used for flush medians. Read from search-result snippets only; nzta.govt.nz could not be fetched. The URL path was inferred from sibling TCD pages; search gave only a redirect link."
+  },
+  {
+    "id": "fm-width",
+    "topic": "Wide centre lines and flush medians",
+    "rule": "The total width of a flush median, including lines, is 1.0 m minimum, 2.5 m desirable and 3.5 m maximum.",
+    "values": {
+      "min_m": 1.0,
+      "desirable_m": 2.5,
+      "max_m": 3.5
+    },
+    "source_title": "TCD Manual Part 5, Flush medians",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/flush-medians",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched. The URL path was inferred from sibling TCD pages; search gave only a redirect link."
+  },
+  {
+    "id": "fm-border",
+    "topic": "Wide centre lines and flush medians",
+    "rule": "Flush median border lines are 100 mm wide and continuous. The diagonal bars join directly into the border line with no gap.",
+    "values": {
+      "border_width_mm": 100
+    },
+    "source_title": "TCD Manual Part 5, Flush medians",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/flush-medians",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched. The URL path was inferred from sibling TCD pages; search gave only a redirect link."
+  },
+  {
+    "id": "fm-bars",
+    "topic": "Wide centre lines and flush medians",
+    "rule": "Flush median diagonal bars are 900 mm wide on rural roads and 600 mm on urban roads, at a 2:1 slope.",
+    "values": {
+      "rural_bar_mm": 900,
+      "urban_bar_mm": 600,
+      "slope": "2:1"
+    },
+    "source_title": "TCD Manual Part 5, Flush medians",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/flush-medians",
+    "confidence": "single-source",
+    "notes": "Older MOTSAM / RTS 4 text reportedly gives a 300 mm bar in places. Confirm before use. Read from search-result snippets only; nzta.govt.nz could not be fetched. The URL path was inferred from sibling TCD pages; search gave only a redirect link."
+  },
+  {
+    "id": "fm-bar-spacing",
+    "topic": "Wide centre lines and flush medians",
+    "rule": "Recommended spacing of flush median bars depends on median length: under 100 m, 6-12 m; 100-500 m, 10-15 m; over 500 m, 12-20 m.",
+    "values": {
+      "lt100m": [
+        6,
+        12
+      ],
+      "100to500m": [
+        10,
+        15
+      ],
+      "gt500m": [
+        12,
+        20
+      ]
+    },
+    "source_title": "TCD Manual Part 5, Flush medians",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/flush-medians",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched. The URL path was inferred from sibling TCD pages; search gave only a redirect link."
+  },
+  {
+    "id": "fm-rrpm",
+    "topic": "Wide centre lines and flush medians",
+    "rule": "Only white two-way RRPMs are used on flush medians, at least 10 m apart on border lines and 20 m apart on diagonal bars.",
+    "values": {
+      "border_min_spacing_m": 10,
+      "diagonal_min_spacing_m": 20
+    },
+    "source_title": "TCD Manual Part 5, Flush medians",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/treatment-of-straights-general-delineation/treatments-in-the-centre-of-the-road/flush-medians",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched. The URL path was inferred from sibling TCD pages; search gave only a redirect link."
+  },
+  {
+    "id": "limit-line-width",
+    "topic": "Intersection markings",
+    "rule": "Since 27 February 2005, a single 300 mm wide continuous limit line must be provided on every controlled intersection approach, unless the surface makes it impracticable. Older lines may stay until a new control or a reseal.",
+    "values": {
+      "width_mm": 300,
+      "pattern": "continuous",
+      "effective": "2005-02-27"
+    },
+    "source_title": "MOTSAM Part 2 Section 3, cl 3.06",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/motsam/part-2/docs/motsam-2-section-3.pdf",
+    "confidence": "confirmed",
+    "notes": "Also in a QLDC drawing set citing MOTSAM (stop limit line 300 mm continuous) and an Auckland Council designation appendix (300 mm limit line). The TCD Rule sets at least 300 mm for signal limit lines (100 mm in cycle lanes). Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "limit-line-colour",
+    "topic": "Intersection markings",
+    "rule": "Limit lines are yellow at STOP control and white at GIVE WAY, roundabout and traffic-signal control.",
+    "values": {
+      "stop": "yellow",
+      "give_way": "white",
+      "signals": "white"
+    },
+    "source_title": "MOTSAM Part 2 Section 3, cl 3.06",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/motsam/part-2/docs/motsam-2-section-3.pdf",
+    "confidence": "confirmed",
+    "notes": "Also given by NZ Road Code learning material (drivingtests.co.nz): yellow line at a stop sign, white at give way. The MOTSAM urban table was cut off. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "limit-line-def",
+    "topic": "Intersection markings",
+    "rule": "A limit line marks where traffic must stop for a stop sign, give-way sign, pedestrian crossing, school crossing point or traffic signal.",
+    "values": {},
+    "source_title": "Land Transport (Road User) Rule 2004, definitions",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/rules/docs/road-user-2004.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "signal-limit-line",
+    "topic": "Intersection markings",
+    "rule": "At traffic signals the limit line is at least 300 mm wide, except in cycle lanes where it is 100 mm.",
+    "values": {
+      "general_mm": 300,
+      "cycle_lane_mm": 100
+    },
+    "source_title": "Land Transport Rule: Traffic Control Devices 2004 (consolidated)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/rules/docs/traffic-control-devices-2004-as-at-3-november-2025.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "holding-line",
+    "topic": "Intersection markings",
+    "rule": "A holding line (for example at a one-lane bridge) is at least 300 mm wide. It only shows where to stop when giving way and has no legal significance.",
+    "values": {
+      "min_width_mm": 300
+    },
+    "source_title": "TCD Manual Part 5, One-lane bridges and other roadways",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/traffic-control-devices-manual/part-5-traffic-control-devices-for-general-use-between-intersections/features-structures-and-hazards-on-beside-or-above-the-roadway/height-and-width-constraints/one-lane-bridges-and-other-roadways",
+    "confidence": "single-source",
+    "notes": "Older MOTSAM text gives 200 mm urban and 300 mm rural. It applies where the approach is at least 5.1 m wide (desirably 6.0 m). Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "stop-word",
+    "topic": "Intersection markings",
+    "rule": "The word STOP is marked on each approach lane to a STOP-controlled intersection, unless the surface makes it impracticable.",
+    "values": {},
+    "source_title": "MOTSAM Part 2 Section 3",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/motsam/part-2/docs/motsam-2-section-3.pdf",
+    "confidence": "single-source",
+    "notes": "The STOP letter height was not found. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "word-height",
+    "topic": "Intersection markings",
+    "rule": "Pavement word messages have letters at least 2 m high in urban areas. On rural roads all vertical dimensions are increased by 50%.",
+    "values": {
+      "min_letter_m": 2.0,
+      "rural_increase_pct": 50
+    },
+    "source_title": "MOTSAM Part 2 Section 4",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/motsam/part-2/docs/motsam-2-section-4.pdf",
+    "confidence": "single-source",
+    "notes": "This is the general rule for word messages. The STOP-specific dimension was not seen. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "give-way-symbol",
+    "topic": "Intersection markings",
+    "rule": "The size and position of the GIVE WAY triangle pavement marking could not be confirmed.",
+    "values": {},
+    "source_title": "MOTSAM Part 2 Section 3",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/motsam/part-2/docs/motsam-2-section-3.pdf",
+    "confidence": "unclear",
+    "notes": "MOTSAM snippets mention white triangle heights of 4.0 m and 6.1 m, placed no more than 20 m from the limit line. An Auckland Council appendix shows 2.5 m and 4.0 m triangles. Which applies to which case is unresolved. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "zebra-new-format",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "New zebra crossings, and crossings remarked after a reseal, use format M1-1.3: 600 mm white bars with 600 mm gaps.",
+    "values": {
+      "bar_mm": 600,
+      "gap_mm": 600,
+      "effective": "2021-01-18"
+    },
+    "source_title": "NZ Gazette 2021-au89 (TCD Rule cl 5.4(1A) notice); NZTA Pedestrian Network Guidance 3.4 Crossings v1.2 (Feb 2026) Table 10",
+    "source_url": "https://gazette.govt.nz/notice/id/2021-au89",
+    "confidence": "confirmed",
+    "notes": "The Gazette notice was read directly. NZTA's 2026 guidance (snippet) gives 600 mm bars and 600 mm gaps. This brings NZ into line with Australia."
+  },
+  {
+    "id": "zebra-interim",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "When an existing crossing marked in the old 300 x 600 mm format (M1-1) is remarked for maintenance, it should use the interim 450 x 450 mm format (M1-1.2).",
+    "values": {
+      "old_bar_mm": 300,
+      "old_gap_mm": 600,
+      "interim_bar_mm": 450,
+      "interim_gap_mm": 450
+    },
+    "source_title": "NZ Gazette 2021-au89",
+    "source_url": "https://gazette.govt.nz/notice/id/2021-au89",
+    "confidence": "single-source",
+    "notes": "Read directly. The interim format is made by widening each stripe 150 mm and shrinking the gap by 150 mm."
+  },
+  {
+    "id": "zebra-bar-length",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "Zebra crossing bars are at least 2.0 m long.",
+    "values": {
+      "min_bar_length_m": 2.0
+    },
+    "source_title": "NZTA Pedestrian Network Guidance 3.4 Crossings (Feb 2026) Table 10; MOTSAM (older)",
+    "source_url": "https://www.nzta.govt.nz/assets/Walking-Cycling-and-Public-Transport/docs/pedestrian-network-guidance/docs/3.4-crossings-v1.2-feb-2026.pdf",
+    "confidence": "confirmed",
+    "notes": "MOTSAM gave 2.0 m minimum and 3.0 m desirable. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "zebra-colour",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "Zebra crossing markings must be reflectorised white and must contrast with the road surface.",
+    "values": {
+      "colour": "reflectorised white"
+    },
+    "source_title": "NZTA Pedestrian Network Guidance 3.4 (2026); NZTA OIA response citing TCD Rule cl 8.2",
+    "source_url": "https://www.nzta.govt.nz/assets/Walking-Cycling-and-Public-Transport/docs/pedestrian-network-guidance/docs/3.4-crossings-v1.2-feb-2026.pdf",
+    "confidence": "confirmed",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "zebra-limit-line",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "The position and width of the limit line in advance of a zebra crossing could not be confirmed.",
+    "values": {},
+    "source_title": "MOTSAM Part 2 Section 3",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/motsam/part-2/docs/motsam-2-section-3.pdf",
+    "confidence": "unclear",
+    "notes": "Snippets give '300 mm minimum, 5 m in advance of the crossing bars' and also '200 mm urban / 300 mm rural, continuous'. These conflict."
+  },
+  {
+    "id": "ped-signal-guide-lines",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "Lines guiding pedestrians at pedestrian traffic signals must be white and 100 mm wide.",
+    "values": {
+      "width_mm": 100,
+      "colour": "white"
+    },
+    "source_title": "Land Transport Rule: Traffic Control Devices Amendment 2019",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/rules/docs/traffic-control-devices-amendment-2019.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "cycle-lane-lines",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "Cycle lane lines are reflectorised white, 100 mm wide and continuous. Cycle lanes must be marked with cycle symbols but do not need signs.",
+    "values": {
+      "width_mm": 100
+    },
+    "source_title": "NZTA Cycling Network Guidance, Cycle lanes (Table 8-1)",
+    "source_url": "https://nzta.govt.nz/walking-cycling-and-public-transport/cycling/cycling-standards-and-guidance/cycling-network-guidance/designing-a-cycle-facility/between-intersections/cycle-lanes",
+    "confidence": "single-source",
+    "notes": "The pattern of the cycle lane edge line depends on the parking arrangement. Green surfacing is optional (recommended at conflict points in the NZ Supplement presentation). Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "rrpm-max-spacing",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "RRPMs along a line are placed at no more than 20 m intervals on straights and at 10 m intervals on curves.",
+    "values": {
+      "straight_max_m": 20,
+      "curve_m": 10
+    },
+    "source_title": "NZTA M12-S:2022 Specification for raised pavement markers",
+    "source_url": "https://nzta.govt.nz/assets/resources/raised-pvmt-markers/nzta-m12-s-2022-specification-for-raised-pavement-markers.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "rrpm-centreline",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "White RRPMs on lane lines and normal centre lines go centrally in every second gap between paint stripes, which gives a nominal 20 m spacing.",
+    "values": {
+      "colour": "white",
+      "spacing_m": 20
+    },
+    "source_title": "NZTA SP/SP14 Specification for installation of RRPMs; MOTSAM Part 2 Section 4 (2010)",
+    "source_url": "https://nzta.govt.nz/assets/resources/raised-pvmt-markers-installation/docs/raised-pvmt-markers-installation.pdf",
+    "confidence": "confirmed",
+    "notes": "MOTSAM allows 10 m in urban areas. The 2010 motorway Part 10 uses 10 m. Yellow advance-warning RRPMs are about 20 m apart. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "rrpm-tolerance",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "RRPMs must be placed within 50 mm of the specified location.",
+    "values": {
+      "tolerance_mm": 50
+    },
+    "source_title": "NZTA SP/SP14 Specification for installation of RRPMs",
+    "source_url": "https://nzta.govt.nz/assets/resources/raised-pvmt-markers-installation/docs/raised-pvmt-markers-installation.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "rrpm-red",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "Red RRPMs are used on the left edge of slow-vehicle bays at 20 m intervals.",
+    "values": {
+      "colour": "red",
+      "spacing_m": 20
+    },
+    "source_title": "MOTSAM Part 2 (2010)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/motsam/part-2/docs/motsam-2-section-4.pdf",
+    "confidence": "single-source",
+    "notes": "Older text. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "rrpm-paint-gap",
+    "topic": "Pedestrian crossings, cycle lanes, arrows, RRPMs",
+    "rule": "Where an RRPM sits on a painted line, the paint may be left out for 150 mm either side of the marker.",
+    "values": {
+      "paint_omit_each_side_mm": 150
+    },
+    "source_title": "NZTA P/22 Specification for reflectorised pavement marking",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/reflectorised-pvmt-marking/docs/reflectorised-pvmt-marking.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "mat-skid-paint",
+    "topic": "Materials",
+    "rule": "Paint markings (dry film under 0.9 mm) must have an initial skid resistance of at least 45 BPN.",
+    "values": {
+      "min_bpn": 45,
+      "applies_dft_lt_mm": 0.9
+    },
+    "source_title": "NZTA (TNZ) P/22 Specification for reflectorised pavement marking",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/reflectorised-pvmt-marking/docs/reflectorised-pvmt-marking.pdf",
+    "confidence": "confirmed",
+    "notes": "Also given by the NZRF Materials Guide (2009) citing NZTA M7 Appendix B. Without surface-applied particles, paint can be as low as 30 BPN. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "mat-skid-thick",
+    "topic": "Materials",
+    "rule": "Markings with a dry film of 0.9 mm or more (for example thermoplastic or other long-life materials) must have a skid resistance between 50 and 65 BPN.",
+    "values": {
+      "min_bpn": 50,
+      "max_bpn": 65
+    },
+    "source_title": "NZTA P/22; NZTA M/20 (SP/SM20) Long-life roadmarking materials",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/reflectorised-pvmt-marking/docs/reflectorised-pvmt-marking.pdf",
+    "confidence": "confirmed",
+    "notes": "P/22 says over 50 and under 65. M/20 says not less than 50 and not more than 65. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "mat-dft-tiers",
+    "topic": "Materials",
+    "rule": "Roadmarking paints are approved under NZTA M7 at set dry film thicknesses: 180, 220 or 300 microns.",
+    "values": {
+      "dft_um": [
+        180,
+        220,
+        300
+      ]
+    },
+    "source_title": "NZRF Roadmarking Materials Guide Rev 2 (2009); Auckland Transport Code of Practice 2013 s10 Table 29",
+    "source_url": "https://www.nzrf.co.nz/techdocs/NZRF-Materials-Guide.pdf",
+    "confidence": "confirmed",
+    "notes": "The NZRF guide was read directly. AT CoP Table 29 recommends 180/220/300 micron DFT by AADT band (over 8,000; 1,500-8,000; under 1,500), but which tick goes in which cell was lost in extraction."
+  },
+  {
+    "id": "mat-paint-class",
+    "topic": "Materials",
+    "rule": "Under M7, paint class A has passed performance tests to 1 million vehicle passes, class B to 1.5 million and class C to over 2 million.",
+    "values": {
+      "A": 1000000,
+      "B": 1500000,
+      "C": 2000000
+    },
+    "source_title": "NZRF Roadmarking Materials Guide Rev 2 (2009)",
+    "source_url": "https://www.nzrf.co.nz/techdocs/NZRF-Materials-Guide.pdf",
+    "confidence": "single-source",
+    "notes": "Read directly. It is a 2009 industry guide, so check it against the current NZTA M07:2022."
+  },
+  {
+    "id": "mat-retro-m7",
+    "topic": "Materials",
+    "rule": "Under M7 testing, a beaded test paint must keep at least 100 mcd/m2/lux (white) or 80 mcd/m2/lux (yellow) after the required number of vehicle passes.",
+    "values": {
+      "white_mcd": 100,
+      "yellow_mcd": 80
+    },
+    "source_title": "NZRF Roadmarking Materials Guide Rev 2 (2009), citing NZTA M7",
+    "source_url": "https://www.nzrf.co.nz/techdocs/NZRF-Materials-Guide.pdf",
+    "confidence": "single-source",
+    "notes": "Read directly (2009). This is a product-approval test, not an in-service performance threshold. Current M07:2022 values not verified."
+  },
+  {
+    "id": "mat-beads",
+    "topic": "Materials",
+    "rule": "Glass beads used on NZTA-funded or NZTA-managed networks must comply with AS 2009. NZTA also limits heavy metals in beads.",
+    "values": {
+      "standard": "AS 2009"
+    },
+    "source_title": "NZRF Roadmarking Materials Guide Rev 2 (2009)",
+    "source_url": "https://www.nzrf.co.nz/techdocs/NZRF-Materials-Guide.pdf",
+    "confidence": "single-source",
+    "notes": "An NZTA delineation page snippet says Type B beads (nominal 0.6 mm) are generally used. Bead application rates in g/m2 were not found."
+  },
+  {
+    "id": "mat-visibility",
+    "topic": "Materials",
+    "rule": "Between 1 and 2 months after application, a P/22 marking must be clearly visible for a forward distance of 150 m.",
+    "values": {
+      "forward_visibility_m": 150
+    },
+    "source_title": "NZTA P/22",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/reflectorised-pvmt-marking/docs/reflectorised-pvmt-marking.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "mat-retro-geometry",
+    "topic": "Materials",
+    "rule": "Roadmarking retroreflectivity is measured with 30 m geometry: 88.76 deg entrance angle and 1.05 deg observation angle.",
+    "values": {
+      "entrance_deg": 88.76,
+      "observation_deg": 1.05
+    },
+    "source_title": "NZTA T16 Determination of retroreflectivity",
+    "source_url": "https://www.nzta.govt.nz/resources/determination-retroreflectivity",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "weather-surface",
+    "topic": "Materials",
+    "rule": "No marking may be applied to a wet, frosty or dirty surface. Thermoplastic must not be applied where moisture is present or the surface is below 5 deg C.",
+    "values": {
+      "thermo_min_surface_c": 5
+    },
+    "source_title": "NZTA P/22, cl 1-6 / 1-7",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/reflectorised-pvmt-marking/docs/reflectorised-pvmt-marking.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "weather-paint",
+    "topic": "Materials",
+    "rule": "Paint should be applied only when road and air temperatures are 10 deg C and rising and relative humidity is 85% and falling, and not if dew is expected within 2 hours.",
+    "values": {
+      "min_temp_c": 10,
+      "max_rh_pct": 85,
+      "no_dew_within_h": 2
+    },
+    "source_title": "NZRF Roadmarking Materials Guide Rev 2 (2009)",
+    "source_url": "https://www.nzrf.co.nz/techdocs/NZRF-Materials-Guide.pdf",
+    "confidence": "single-source",
+    "notes": "Read directly. This is industry guidance, not a contract spec. A specific contract may set different limits."
+  },
+  {
+    "id": "new-surface-age",
+    "topic": "Materials",
+    "rule": "New concrete and asphalt should be aged at least 30 days before painting.",
+    "values": {
+      "min_days": 30
+    },
+    "source_title": "NZRF Roadmarking Materials Guide Rev 2 (2009)",
+    "source_url": "https://www.nzrf.co.nz/techdocs/NZRF-Materials-Guide.pdf",
+    "confidence": "single-source",
+    "notes": "Read directly."
+  },
+  {
+    "id": "protect-wet",
+    "topic": "Materials",
+    "rule": "The contractor must fully protect markings while they dry, and must remove all tracked paint so drivers are not confused, especially in the wet and at night.",
+    "values": {},
+    "source_title": "NZTA notes to P/12 Specification for pavement marking",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/pvmt-marking/docs/pvmt-marking-notes.pdf",
+    "confidence": "single-source",
+    "notes": "From the older P/12 notes. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-road-levels",
+    "topic": "TTM for road marking",
+    "rule": "CoPTTM road levels are: LV, AADT under 500; Level 1, 500-10,000; Level 2, over 10,000; Level 3, multi-lane roads, expressways and motorways with AADT over 10,000 and speed over 75 km/h.",
+    "values": {
+      "LV_lt": 500,
+      "L1": [
+        500,
+        10000
+      ],
+      "L2_gt": 10000,
+      "L3_speed_gt_kmh": 75
+    },
+    "source_title": "NZTA CoPTTM, Traffic management levels",
+    "source_url": "https://nzta.govt.nz/roads-and-rail/code-of-practice-for-temporary-traffic-management/resources/traffic-management-levels",
+    "confidence": "single-source",
+    "notes": "This is CoPTTM. The NZGTTM's risk-based approach does not use these levels the same way. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-mobile-roadmarking",
+    "topic": "TTM for road marking",
+    "rule": "Road marking (and RRPM work) can be run as a mobile operation under CoPTTM Section D.",
+    "values": {},
+    "source_title": "CoPTTM 4th ed, Section D Mobile operations (Nov 2018)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/code-temp-traffic-management/docs/2018/section-d-mobile-operations-copttm-4th-ed-nov2018.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-tma",
+    "topic": "TTM for road marking",
+    "rule": "Every shadow vehicle in a mobile operation on a Level 3 road must have a TMA. On a Level 2 road, a TMA is needed when the operation is in the live lane or on the shoulder within 2 m of it.",
+    "values": {
+      "L2_shoulder_within_m": 2
+    },
+    "source_title": "CoPTTM 4th ed, Section D (Nov 2018)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/code-temp-traffic-management/docs/2018/section-d-mobile-operations-copttm-4th-ed-nov2018.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-roll-ahead",
+    "topic": "TTM for road marking",
+    "rule": "A mobile operation needs a minimum 10 m roll-ahead in front of the shadow vehicle. The longitudinal safety zone is the shadow vehicle's length plus 10 m.",
+    "values": {
+      "roll_ahead_m": 10
+    },
+    "source_title": "CoPTTM 4th ed, Section D (Nov 2018)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/code-temp-traffic-management/docs/2018/section-d-mobile-operations-copttm-4th-ed-nov2018.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-shadow-visibility",
+    "topic": "TTM for road marking",
+    "rule": "Approaching drivers need a rear visibility of 50 m to the shadow vehicle on LV and Level 1 roads, and 100 m on Level 2 and 3 roads. If that cannot be achieved, add shadow vehicles.",
+    "values": {
+      "LV_L1_m": 50,
+      "L2_L3_m": 100
+    },
+    "source_title": "CoPTTM 4th ed, Section D (Nov 2018)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/code-temp-traffic-management/docs/2018/section-d-mobile-operations-copttm-4th-ed-nov2018.pdf",
+    "confidence": "single-source",
+    "notes": "On LV/L1 roads without a shadow vehicle, the distance applies to the work vehicle. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-wet-cone",
+    "topic": "TTM for road marking",
+    "rule": "450 mm cones may be used only to delineate and protect wet road markings. Every other delineation use needs devices at least 900 mm tall.",
+    "values": {
+      "wet_paint_cone_mm": 450,
+      "other_min_mm": 900
+    },
+    "source_title": "CoPTTM 4th ed, Section D; NZTA road-marking TMP sheets (Mar 2010)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/code-temp-traffic-management/docs/2018/section-d-mobile-operations-copttm-4th-ed-nov2018.pdf",
+    "confidence": "confirmed",
+    "notes": "Both CoPTTM and the 2010 road-marking TMPs say this. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-lane-width",
+    "topic": "TTM for road marking",
+    "rule": "For the 2010 mobile road-marking TMPs, at least 3 m of lane must stay open for traffic once set up. Where the remaining width is 2.75-3 m, arrow boards show caution mode instead of the sequential arrow.",
+    "values": {
+      "min_lane_m": 3.0,
+      "caution_band_m": [
+        2.75,
+        3.0
+      ]
+    },
+    "source_title": "NZTA CoPTTM road-marking TMP sheets (Mar 2010)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/code-temp-traffic-management/tmp-road-marking/docs/03-mobile-tmp-shoulder-bar-over65-march2010.pdf",
+    "confidence": "single-source",
+    "notes": "The 2010 flush-median static TMP uses 2.75 m minimum. These are template TMPs, not the Code itself. Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-cone-run",
+    "topic": "TTM for road marking",
+    "rule": "In the 2010 edge-line TMPs, wet-paint cone runs must not exceed 1 km, and the tail pilot may be up to 1 km behind the work vehicle. Marking speed is typically 10-20 km/h.",
+    "values": {
+      "max_cone_run_km": 1,
+      "max_tail_pilot_sep_km": 1
+    },
+    "source_title": "NZTA CoPTTM road-marking TMP sheets (Mar 2010)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/code-temp-traffic-management/tmp-road-marking/docs/13-mobile-tmp-edgeline-under65-mar2010.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-shadow-shoulder",
+    "topic": "TTM for road marking",
+    "rule": "In the 2010 shoulder-marking TMP, the shadow vehicle stays 40-60 m behind the applicator.",
+    "values": {
+      "min_m": 40,
+      "max_m": 60
+    },
+    "source_title": "NZTA CoPTTM road-marking TMP (Mar 2010)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/code-temp-traffic-management/tmp-road-marking/docs/02-mobile-tmp-shoulder-bar-less65-march2010.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-pilots",
+    "topic": "TTM for road marking",
+    "rule": "For centre-line marking where curves or hills limit sight distance, lead and tail pilot vehicles must be used.",
+    "values": {},
+    "source_title": "NZTA CoPTTM road-marking TMP (Mar 2010)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/code-temp-traffic-management/tmp-road-marking/docs/09-mobile-tmp-centreline-under65-mar2010.pdf",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-aw-distance",
+    "topic": "TTM for road marking",
+    "rule": "The maximum distance from the advance warning vehicle to the shadow vehicle could not be confirmed.",
+    "values": {},
+    "source_title": "CoPTTM Section D (various editions)",
+    "source_url": "https://www.nzta.govt.nz/assets/resources/code-temp-traffic-management/docs/2018/section-d-mobile-operations-copttm-4th-ed-nov2018.pdf",
+    "confidence": "unclear",
+    "notes": "Snippets give minimum 400 m / maximum 1000 m (superseded note) and maximum 1600 m (2015 compilation)."
+  },
+  {
+    "id": "ttm-nzgttm-published",
+    "topic": "TTM for road marking",
+    "rule": "NZTA published the New Zealand Guide to Temporary Traffic Management (NZGTTM), a risk-based replacement for the prescriptive CoPTTM, in April 2023.",
+    "values": {
+      "published": "2023-04"
+    },
+    "source_title": "Auckland Transport TTM Update #76 (16 July 2025)",
+    "source_url": "https://at.govt.nz/media/y1gbcocy/auckland-transport-ttm-update-76-at-road-controlling-authority-notice-transition-to-nzgtttm.pdf",
+    "confidence": "single-source",
+    "notes": "Read directly."
+  },
+  {
+    "id": "ttm-copttm-frozen",
+    "topic": "TTM for road marking",
+    "rule": "From 1 November 2024, CoPTTM is still available on the NZTA website but is no longer updated or maintained. NZTA recommends RCAs and contractors follow the NZGTTM.",
+    "values": {
+      "date": "2024-11-01"
+    },
+    "source_title": "NZTA NZGTTM roll-out page",
+    "source_url": "https://www.nzta.govt.nz/roads-and-rail/new-zealand-guide-to-temporary-traffic-management",
+    "confidence": "single-source",
+    "notes": "Read from search-result snippets only; nzta.govt.nz could not be fetched."
+  },
+  {
+    "id": "ttm-at-cutover",
+    "topic": "TTM for road marking",
+    "rule": "From 1 July 2026, Auckland Transport assesses Corridor Access Requests only under the NZGTTM. Applications without a risk assessment may be declined.",
+    "values": {
+      "date": "2026-07-01"
+    },
+    "source_title": "Auckland Transport TTM Update #76 (16 July 2025)",
+    "source_url": "https://at.govt.nz/media/y1gbcocy/auckland-transport-ttm-update-76-at-road-controlling-authority-notice-transition-to-nzgtttm.pdf",
+    "confidence": "single-source",
+    "notes": "Read directly. This applies to Auckland Transport only. Other RCAs set their own dates (for example, Waitaki from 1 Jan 2026)."
+  },
+  {
+    "id": "ttm-national-deadline",
+    "topic": "TTM for road marking",
+    "rule": "The national deadline for full NZGTTM adoption by councils on NLTF-funded work could not be confirmed.",
+    "values": {},
+    "source_title": "NZTA Ministerial expectations letter attachment; Timaru DC NZGTTM transition plan",
+    "source_url": "https://www.nzta.govt.nz/assets/P-and-I-Knowledge-Base/docs/Ministerial-expectations-letter-to-councils-attachment-1-specific-requirements.pdf",
+    "confidence": "unclear",
+    "notes": "The NZTA attachment (snippet) says new contracts by 1 July 2026 and existing contracts by 1 July 2027. Timaru DC cites an NZTA letter of 28 July 2025 requiring full implementation by 1 July 2028. These conflict, and the later letter may extend the dates."
+  },
+  {
+    "id": "ttm-stms-role",
+    "topic": "TTM for road marking",
+    "rule": "What the STMS and TC roles and qualifications become under the NZGTTM could not be confirmed.",
+    "values": {},
+    "source_title": "NZQA unit standard 31961; job adverts",
+    "source_url": "https://www.nzqa.govt.nz/nqfdocs/units/pdf/31961.pdf",
+    "confidence": "unclear",
+    "notes": "Under CoPTTM the STMS sets up, changes and removes the worksite and leads risk assessment and briefings. No source on the NZGTTM role changes was found."
+  }
+]
