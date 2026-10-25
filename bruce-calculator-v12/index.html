@@ -141,6 +141,21 @@ body {
 .u3-btns { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; max-width: 58%; pointer-events: auto; }
 .u3-btns button, .u3-panel button { font-family: var(--font-label); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
 .u3-btns button { background: rgba(12,14,16,.62); color: #fff; border: 1px solid rgba(255,255,255,.25); border-radius: 8px; padding: 8px 10px; font-size: 13px; }
+.u3-coach { position: absolute; left: 50%; top: calc(118px + env(safe-area-inset-top, 0px)); transform: translateX(-50%); width: min(92%, 520px); text-align: center; font-family: var(--font-label); font-weight: 700; font-size: 22px; letter-spacing: .03em; line-height: 1.15; padding: 9px 14px; border-radius: 12px; background: rgba(12,14,16,.72); border: 1px solid rgba(255,255,255,.22); opacity: 0; transition: opacity .15s; text-wrap: balance; pointer-events: none; }
+.u3-coach.show { opacity: 1; }
+.u3-lesson { position: absolute; left: 50%; top: calc(176px + env(safe-area-inset-top, 0px)); transform: translateX(-50%); width: min(88%, 480px); text-align: center; font-family: var(--font-body); font-size: 13px; color: #9fe8ff; text-shadow: 0 1px 4px rgba(0,0,0,.8); pointer-events: none; }
+.u3-coach.go { background: rgba(30,140,70,.85); border-color: #7dff9b; }
+.u3-coach.stop { background: rgba(200,60,40,.9); border-color: #ff9a7a; font-size: 30px; }
+.u3-coach.warn { background: rgba(190,120,0,.85); border-color: #ffd23a; }
+.u3-coach.tut { background: rgba(20,60,110,.88); border-color: #9fe8ff; }
+@keyframes u3pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,.8); } 50% { box-shadow: 0 0 0 12px rgba(255,255,255,0); } }
+.u3-pad.hint { animation: u3pulse .9s ease-in-out infinite; border-color: #fff; }
+.u3-jobcard span:not(.tag), .u3-jobcard small { text-transform: none; letter-spacing: 0; font-weight: 400; }
+.u3-card img { max-height: 150px; object-fit: cover; object-position: 50% 40%; }
+.u3-jobcard.start { border-color: #9fe8ff; background: rgba(80,180,255,.14); }
+.u3-jobcard.start .tag { color: #9fe8ff; }
+.u3-plan-hint { font-family: var(--font-body); font-size: 13px; color: #9fe8ff; margin: -2px 0 6px; }
+@media (prefers-reduced-motion: reduce) { .u3-pad.hint { animation: none; outline: 3px solid #fff; } }
 .u3-pop { position: absolute; left: 0; right: 0; top: 30%; text-align: center; font-size: 46px; font-weight: 700; letter-spacing: .04em; opacity: 0; transform: scale(.8); transition: opacity .15s, transform .15s; text-shadow: 0 3px 12px rgba(0,0,0,.6); }
 .u3-pop.show { opacity: 1; transform: scale(1); }
 @media (max-width: 480px) { .u3-pop { font-size: 32px; padding: 0 12px; } .u3-btns button { font-size: 12px; padding: 7px 8px; } }
@@ -364,6 +379,8 @@ canvas { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; background: #1d1f21;
         <button type="button" data-act="exit">ON/C</button>
       </div>
     </div>
+    <div class="u3-coach" aria-live="polite"></div>
+    <div class="u3-lesson"></div>
     <div class="u3-pop"></div>
     <div class="u3-bottom">
       <div class="u3-chip u3-ch" hidden><b>CH 0.0 m</b></div>
@@ -400,6 +417,11 @@ canvas { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; background: #1d1f21;
       <h1>LINE PAINTER 3D</h1>
       <div class="sub">NY662 · Independent Roadmarkers</div>
       <div class="u3-jobs">
+        <button type="button" class="u3-jobcard start" data-act="job" data-job="dayone">
+          <span class="tag">Start here</span><b>Day one with Bruce</b>
+          <span>Two minutes. Learn the controls one at a time.</span>
+          <small data-best="dayone"></small>
+        </button>
         <button type="button" class="u3-jobcard" data-act="job" data-job="remark">
           <span class="tag">Re-mark</span><b>Fordell back road</b>
           <span>2 km of worn centre line. The old dashes show you where.</span>
@@ -423,6 +445,7 @@ canvas { width: 100%; max-width: 100%; aspect-ratio: 4 / 5; background: #1d1f21;
       </div>
       <button type="button" class="u3-ghost" data-act="latch">Latch: off</button>
       <button type="button" class="u3-ghost" data-act="auto">Auto gun: off</button>
+      <button type="button" class="u3-ghost" data-act="train">Training: on</button>
       <button type="button" class="u3-ghost" data-act="mute">Sound: on</button>
       <button type="button" class="u3-ghost" data-act="exit">Back</button>
     </div>

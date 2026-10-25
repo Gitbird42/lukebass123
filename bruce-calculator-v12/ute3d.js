@@ -20,6 +20,11 @@
   // "check" marks rules still to be confirmed against the crew's own documents.
   const YEL_LAT = -0.2; // no-passing line: 100 mm wide, ~100 mm from the 100 mm centre line, on your side
   const JOBS = {
+    dayone: {
+      id: 'dayone', title: 'Day one with Bruce', tag: 'Start here', seal: 'old', len: 420, tutorial: true,
+      brief: 'A short run that teaches you the controls one at a time.',
+      calls: []
+    },
     remark: {
       id: 'remark', title: 'Fordell back road', tag: 'Re-mark', seal: 'old', len: 2000,
       brief: 'Re-mark 2 km of worn centre line. The old dashes show you where.',
@@ -838,7 +843,7 @@
 
     // ---------- HUD ----------
     const $ = sel => root.querySelector(sel);
-    const hud = { score: $('.u3-score'), combo: $('.u3-combo'), prog: $('.u3-prog i'), dist: $('.u3-dist'), speed: $('.u3-speed'), paint: $('.u3-paint i'), litres: $('.u3-litres'), acc: $('.u3-acc'), aim: $('.u3-aim i'), pop: $('.u3-pop'), strip: $('.u3-strip'), ch: $('.u3-ch b'), coach: $('.u3-coach') };
+    const hud = { score: $('.u3-score'), combo: $('.u3-combo'), prog: $('.u3-prog i'), dist: $('.u3-dist'), speed: $('.u3-speed'), paint: $('.u3-paint i'), litres: $('.u3-litres'), acc: $('.u3-acc'), aim: $('.u3-aim i'), pop: $('.u3-pop'), strip: $('.u3-strip'), ch: $('.u3-ch b'), coach: $('.u3-coach'), lesson: $('.u3-lesson') };
     let popT = 0;
     // timing strip: the next stretch of road laid flat, old dashes grey, fresh paint white, gun in orange
     const sctx = hud.strip ? hud.strip.getContext('2d') : null;
@@ -881,8 +886,24 @@
       root.querySelectorAll('[data-hold]').forEach(b => b.classList.toggle('hint', !!pad && b.dataset.hold === pad));
     }
     function nextPiece(list, gunS) { for (const e of list) if (e.s1 > gunS) return e; return null; }
+    // Day one: one control at a time, each step waits until you've done it
+    const TUT = [
+      { say: 'Hold + to get her rolling', pad: 'up', done: () => S.speed > 3 },
+      { say: 'Steer with ◀ ▶ until the gun bar goes green: the gun is on the old line', pad: 'right', done: () => S.tutOn > 1 },
+      { say: 'Hold SPRAY over a faded dash, let go at its end. Do 2 good ones', pad: 'spray', done: () => S.perfect + S.tutGood >= 2 },
+      { say: 'Tap CAM at the top to see the gun up close', pad: null, done: () => S.cam !== 0 },
+      { say: 'Ready. Paint to the end of the run, or ON/C for the job board', pad: null, done: () => false }
+    ];
     function coach(gunS, gunLat) {
       if (S.state !== 'play') return setCoach('', null);
+      if (job.tutorial) {
+        S.tutOn = Math.abs(gunLat) < ON_LINE ? (S.tutOn || 0) + 1 / 60 : 0;
+        while (S.tutStep < TUT.length - 1 && TUT[S.tutStep].done()) { S.tutStep++; blip(990, .1); setTimeout(() => blip(1320, .14), 100); pop('NICE', 'good'); }
+        const st = TUT[S.tutStep];
+        const lesson = hud.lesson; if (lesson) lesson.textContent = 'Step ' + (S.tutStep + 1) + '/' + TUT.length + ' · ' + st.say;
+        // steps 1, 2 and 4 are coached by the lesson; while painting, the live calls below take over
+        if (S.tutStep !== 2 && S.tutStep !== 4) return setCoach(st.say, st.pad, 'tut');
+      } else if (hud.lesson) hud.lesson.textContent = '';
       if (S.phase === 'setout') {
         const n = planVal('n'), aw = planVal('aw');
         const want = []; if (n && aw) { const first = job.zone[0] - n * (aw[0] + aw[1]); for (let k = 0; k < n; k++) { const v = first + k * (aw[0] + aw[1]); want.push(v, v + aw[0]); } }
@@ -952,9 +973,8 @@
       }
     }
     function closeCall() { activeCall = null; S.state = 'play'; showPanel('play'); }
-    // clear the coach whenever a panel covers the road
-    const _showPanel = (name) => { if (name !== 'play') setCoach('', null); };
-    function showPanel(name) { root.querySelectorAll('.u3-panel').forEach(p => p.hidden = p.dataset.panel !== name); root.querySelector('.u3-hud').hidden = name !== 'play'; }
+    function showPanel(name) {
+      if (name !== 'play') setCoach('', null); /* the coach only talks while you're on the road */ root.querySelectorAll('.u3-panel').forEach(p => p.hidden = p.dataset.panel !== name); root.querySelector('.u3-hud').hidden = name !== 'play'; }
 
     function resize() {
       const w = root.clientWidth, h = root.clientHeight;
@@ -974,6 +994,8 @@
       S.nextStreak = 25 + rnd() * 25;
       S.skipOn = DASH_ON; S.skipOff = DASH_EVERY - DASH_ON; S.ySide = -1; S.awLatch = job.awLen || 13;
       S.training = store.get('ute3dTrainV12', true); if (ghost) ghost.visible = S.training;
+      S.tutStep = 0; S.tutOn = 0; S.tutGood = 0;
+      if (job.tutorial) { S.off = -1.6; S.speedTarget = 1.4; S.auto = false; S.latch = false; syncAuto(); } // start off the line so step 2 means something
       S.phase = job.plan ? 'plan' : 'paint'; S.planAns = {}; S.spots = []; S.spotsOk = 0; S.spotsExtra = 0;
       initAudio(); if (A && A.ac.state === 'suspended') A.ac.resume();
       if (job.plan) { S.state = 'plan'; openPlan(); } else showPanel('play');
@@ -1239,7 +1261,7 @@
         else if (c < 0.5 && d.offLine > 1) { S.combo = 1; pop('OFF LINE', 'bad'); }
         else if (c >= 0.85 && d.over <= allow) { S.perfect++; S.combo = Math.min(8, S.combo + 1); S.bestCombo = Math.max(S.bestCombo, S.combo); S.score += 100 * S.combo * (0.6 + S.speed / 7); pop(S.combo > 2 ? 'PERFECT ×' + S.combo : 'PERFECT', 'good'); blip(660 + S.combo * 60, .12); }
         else if (c > 0.5) {
-          S.score += 40;
+          S.score += 40; S.tutGood = (S.tutGood || 0) + 1;
           const late = d.late || 0, early = d.early || 0;
           // short because the dash was started late or early, or simply long
           pop(c < 0.85 ? (late > 0.2 && late >= early ? 'GOOD · TAP EARLIER' : early > 0.2 ? 'GOOD · TAP LATER' : 'GOOD · A BIT SHORT')
