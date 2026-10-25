@@ -21,5 +21,6 @@ each new idea starts as a fresh copy of the one before.
 | v14 | `bruce-calculator-v14/` | https://claude.ai/artifact/HvtMSuzpjp1umvueNFwaYj | Awesome reseal: golden-hour flyover, work site (flaggers, signs, roller, sweeper, TMA truck with arrow board), no job sheet, DOT set-out at speed, white run then yellow run, traffic queue with toots, finish cinematic; new Gun view camera and gun markers |
 | v15 | `bruce-calculator-v15/` | https://claude.ai/artifact/2vdGbUyA83uZbFcZ8eXpWu | Hino 300 line truck built to Hino NZ spec-sheet dimensions, in-cab simulator view (turning wheel, speedo/tacho off the real gear ratios, line-marking control box, live right mirror on the gun), front sighting pointer, rig choice |
 | v16 | `bruce-calculator-v16/` | (work in progress, not published) | Bruce's ute back as default with Hino 300 driving feel (gears, torque, heavier steering), head-out-the-window view, big door mirror on the line, front pointer; Hino cab fixes |
+| v17 | `bruce-calculator-v17/` | LINK | Calculator is Bruce's real one: his clipboard photo as the face with working key hotspots and a 7-segment LCD on his display window; the paper continues as the photo; includes all v16 game work |
 
 Links are private until shared from each page's Share menu.
