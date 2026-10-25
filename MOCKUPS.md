@@ -18,6 +18,6 @@ each new idea starts as a fresh copy of the one before.
 | v11 | `bruce-calculator-v11/` | https://claude.ai/artifact/UMvFS3VqTFQWpENzWC5kz3 | Strategy + set-out: job sheet with live sketch, measuring-wheel set-out run (SPOT/UNDO), paint to your own spots with your skip timer, inspector's audit, 8 researched quick calls on the re-mark |
 | v12 | `bruce-calculator-v12/` | https://claude.ai/artifact/8NLNC72yxGqqGKd9hKTMmK | Always-on coach (SPRAY IN / HOLD / LET GO / STEER), pulsing buttons, Day one with Bruce tutorial, training glow and job-sheet hints |
 | v13 | `bruce-calculator-v13/` | https://claude.ai/artifact/9124QENynmrov5vUCafrpn | Quick calls no longer stop the game: small card, answer on the move, Bruce's note fades out |
-| v14 | `bruce-calculator-v14/` | LINK | Awesome reseal: golden-hour flyover, work site (flaggers, signs, roller, sweeper, TMA truck with arrow board), no job sheet, DOT set-out at speed, white run then yellow run, traffic queue with toots, finish cinematic; new Gun view camera and gun markers |
+| v14 | `bruce-calculator-v14/` | https://claude.ai/artifact/HvtMSuzpjp1umvueNFwaYj | Awesome reseal: golden-hour flyover, work site (flaggers, signs, roller, sweeper, TMA truck with arrow board), no job sheet, DOT set-out at speed, white run then yellow run, traffic queue with toots, finish cinematic; new Gun view camera and gun markers |
 
 Links are private until shared from each page's Share menu.
