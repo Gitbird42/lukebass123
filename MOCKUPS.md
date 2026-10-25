@@ -23,5 +23,6 @@ each new idea starts as a fresh copy of the one before.
 | v16 | `bruce-calculator-v16/` | (work in progress, not published) | Bruce's ute back as default with Hino 300 driving feel (gears, torque, heavier steering), head-out-the-window view, big door mirror on the line, front pointer; Hino cab fixes |
 | v17 | `bruce-calculator-v17/` | https://claude.ai/artifact/W3586NxzmdT6VMTSrVTbNi | Calculator is Bruce's real one: his clipboard photo as the face with working key hotspots and a 7-segment LCD on his display window; the paper continues as the photo; includes all v16 game work |
 | v20 | `bruce-calculator-v20/` | (not published, waiting on Luke) | Built from v17. Road kept clear: small coach pill, quick call tucked in the top corner, page scroll locked while playing so nothing is cut off, smaller pads on short screens. (v18 and v19 exist only on Luke's PC.) |
+| v21 | `bruce-calculator-v21/` | (not published, waiting on Luke) | Built from v20 with names taken out for posting publicly: no Bruce, Independent Roadmarkers, phone, PO Box or plate (Fordell and Wanganui kept). Codes now 777 game, 1777 classic, 2468 snake, 1357 guess, 1985 tribute. Ute photo kept as is. |
 
 Links are private until shared from each page's Share menu.
