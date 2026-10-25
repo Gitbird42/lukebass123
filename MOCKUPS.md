@@ -12,5 +12,6 @@ each new idea starts as a fresh copy of the one before.
 | v5 | `bruce-calculator-v5/` | https://claude.ai/artifact/Tg7FY5ioxTrf6FxGKkQJZT | You paint and steer: hold SPRAY, guide the wheel round bends, no cones on the road |
 | v6 | `bruce-calculator-v6/` | https://claude.ai/artifact/SFRGq9E8kFMhrXvb1eedci | Built from v4: hold SPRAY to paint, light touch on bends, never wanders, no cones on the road |
 | v7 | `bruce-calculator-v7/` | https://claude.ai/artifact/TVrVpvthsLDPYCirPs6RFT | Bonus only for painting the line (OVERSPRAY / OFF LINE penalties), streaker chased by a security guard |
+| v8 | `bruce-calculator-v8/` | LINK | Fair PERFECT for a clean re-mark, timing strip, faded old lines, optional latch (one tap = exactly 3 m), TAP EARLIER/LATER hints |
 
 Links are private until shared from each page's Share menu.
