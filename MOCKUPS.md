@@ -13,6 +13,6 @@ each new idea starts as a fresh copy of the one before.
 | v6 | `bruce-calculator-v6/` | https://claude.ai/artifact/SFRGq9E8kFMhrXvb1eedci | Built from v4: hold SPRAY to paint, light touch on bends, never wanders, no cones on the road |
 | v7 | `bruce-calculator-v7/` | https://claude.ai/artifact/TVrVpvthsLDPYCirPs6RFT | Bonus only for painting the line (OVERSPRAY / OFF LINE penalties), streaker chased by a security guard |
 | v8 | `bruce-calculator-v8/` | https://claude.ai/artifact/9VJckaGy2pk3AtPXaJAKqW | Fair PERFECT for a clean re-mark, timing strip, faded old lines, optional latch (one tap = exactly 3 m), TAP EARLIER/LATER hints |
-| v9 | `bruce-calculator-v9/` | LINK | Job board, quick calls with Bruce says cards, Reseal · crest knowledge job (pre-mark tabs, yellow gun, 5 advance-warning stripes + no-passing line), stars need every rule right |
+| v9 | `bruce-calculator-v9/` | https://claude.ai/artifact/YNg1bkqLLBJYWZYMZXyffR | Job board, quick calls with Bruce says cards, Reseal · crest knowledge job (pre-mark tabs, yellow gun, 5 advance-warning stripes + no-passing line), stars need every rule right |
 
 Links are private until shared from each page's Share menu.
