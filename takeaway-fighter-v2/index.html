@@ -1,0 +1,297 @@
+<title>Takeaway Fighter</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="theme-color" content="#1a1036">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="Food fighters settle what's for takeaway tonight.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@400;600;800&display=swap">
+<style>
+/* Layout: a one-screen arcade app. Title, select, bracket and result are full-screen cards over a neon takeaway strip; the fight is a canvas with thumb pads. Single deliberate night-time look. */
+:root {
+  --night: #1a1036;
+  --plum: #3a1840;
+  --ink: #120c1a;
+  --neon: #ffd23a;
+  --hot: #ff3b2f;
+  --curry: #f2902b;
+  --text: #fff6ea;
+  --muted: #cdb8dc;
+  --font-display: "Bungee", Impact, "Arial Black", sans-serif;
+  --font-body: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body { margin: 0; background: radial-gradient(ellipse at 50% 20%, #4a1f5a 0%, var(--night) 55%, #0c0718 100%); background-color: var(--night); color: var(--text); font-family: var(--font-body); overflow: hidden;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; }
+.screen { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: calc(16px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); overflow-y: auto; box-sizing: border-box; }
+h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(38px, 11vw, 84px); line-height: .92; margin: 0; text-align: center; color: var(--neon);
+  text-shadow: 0 0 18px rgba(255,210,58,.55), 4px 4px 0 var(--hot), 8px 8px 0 var(--ink); letter-spacing: .02em; text-wrap: balance; }
+.tag { color: var(--muted); font-size: 15px; text-align: center; max-width: 34ch; margin: 0; }
+.btn { font-family: var(--font-display); font-size: 20px; letter-spacing: .04em; color: var(--ink); background: var(--neon); border: 0; border-radius: 14px; padding: 14px 22px; cursor: pointer; box-shadow: 0 5px 0 #b8860b, 0 10px 24px rgba(0,0,0,.4); min-width: 240px; }
+.btn.hot { background: var(--hot); color: #fff; box-shadow: 0 5px 0 #8c1a14, 0 10px 24px rgba(0,0,0,.4); }
+.btn.ghost { background: transparent; color: var(--text); border: 2px solid rgba(255,255,255,.35); box-shadow: none; font-size: 15px; min-width: 0; padding: 10px 16px; }
+.btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #b8860b; }
+.btn:focus-visible, .card:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.roster { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; width: min(640px, 100%); }
+.card { position: relative; background: linear-gradient(180deg, #2b1a3e, #1a1028); border: 2px solid rgba(255,255,255,.14); border-radius: 14px; padding: 6px 4px 8px; text-align: center; cursor: pointer; color: var(--text); font-family: var(--font-body); min-width: 0; }
+.card canvas { width: 100%; height: auto; aspect-ratio: 1; display: block; }
+.card b { display: block; font-family: var(--font-display); font-weight: 400; font-size: clamp(10px, 2.6vw, 14px); line-height: 1.1; }
+.card small { display: block; font-size: 11px; color: var(--muted); margin-top: 2px; }
+.card.pick { border-color: var(--neon); box-shadow: 0 0 0 3px rgba(255,210,58,.35); }
+.card.pick2 { border-color: var(--hot); box-shadow: 0 0 0 3px rgba(255,59,47,.35); }
+.card .who { position: absolute; top: 4px; left: 6px; font: 400 11px var(--font-display); color: var(--neon); }
+.card.pick2 .who { color: var(--hot); }
+.stepper { font-family: var(--font-display); font-size: 18px; color: var(--neon); text-align: center; margin: 0; }
+/* bracket */
+.bracket { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; width: min(720px, 100%); align-items: center; }
+.col { display: flex; flex-direction: column; gap: 8px; justify-content: space-around; min-width: 0; }
+.slot { display: flex; align-items: center; gap: 6px; background: #22152f; border: 1px solid rgba(255,255,255,.14); border-radius: 10px; padding: 4px 6px; min-width: 0; }
+.slot canvas { width: 34px; height: 34px; flex: none; }
+.slot span { font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.slot.out { opacity: .35; text-decoration: line-through; }
+.slot.won { border-color: var(--neon); }
+.slot.tbd { color: var(--muted); font-style: italic; }
+.vs { text-align: center; font: 400 12px var(--font-display); color: var(--hot); }
+/* fight */
+#fight { padding: 0; justify-content: flex-start; gap: 0; }
+#stage { width: 100%; max-height: 100%; aspect-ratio: 16 / 9; display: block; background: #000; touch-action: none; }
+.fighttop { position: absolute; top: calc(var(--stage-h, 56vw) * 0.13 + env(safe-area-inset-top, 0px)); left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 3; } /* under the timer, clear of both health bars */
+.fighttop .btn { padding: 6px 12px; font-size: 13px; }
+.pads { width: 100%; flex: 1; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px max(14px, env(safe-area-inset-left, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)); box-sizing: border-box; touch-action: none; }
+.dpad, .acts { display: grid; gap: 10px; }
+.dpad { grid-template-columns: repeat(3, 62px); grid-template-rows: 62px 62px; }
+.acts { grid-template-columns: repeat(2, 78px); grid-template-rows: 62px 62px; }
+.pad { border-radius: 16px; border: 2px solid rgba(255,255,255,.3); background: rgba(255,255,255,.08); color: #fff; font: 400 14px var(--font-display); display: grid; place-items: center; touch-action: none; }
+.pad.big { font-size: 26px; }
+.pad.p { background: rgba(255,59,47,.6); } .pad.k { background: rgba(242,144,43,.65); } .pad.s { background: rgba(255,210,58,.7); color: var(--ink); } .pad.b { background: rgba(94,224,255,.35); }
+.pad.down { filter: brightness(1.6); transform: scale(.95); }
+.hint { font-size: 12px; color: var(--muted); text-align: center; margin: 0; }
+.hint.turn { margin-top: 14px; font-size: 14px; }
+@media (orientation: landscape) { .hint.turn { display: none; } }
+@media (orientation: landscape) and (max-height: 560px) { /* phone on its side: stage fills, pads float over the bottom corners */
+  #fight { justify-content: center; }
+  #stage { width: auto; height: 100%; }
+  .pads { position: absolute; inset: auto 0 0 0; flex: none; background: none; }
+  .dpad { grid-template-columns: repeat(3, 54px); grid-template-rows: 54px 54px; }
+  .acts { grid-template-columns: repeat(2, 66px); grid-template-rows: 54px 54px; }
+  .pad { background-color: rgba(18,12,26,.35); }
+}
+/* result */
+.result { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.result .eyebrow { font: 400 16px var(--font-display); color: var(--muted); letter-spacing: .08em; }
+.result canvas { width: min(240px, 60vw); height: auto; aspect-ratio: 1; filter: drop-shadow(0 0 30px rgba(255,210,58,.45)); }
+.result .shop { font: 400 clamp(30px, 9vw, 56px)/1 var(--font-display); color: var(--neon); text-shadow: 3px 3px 0 var(--hot); }
+.result .dish { font-size: 18px; font-weight: 800; }
+.result .line { color: var(--muted); max-width: 30ch; }
+.install { position: absolute; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); left: 50%; transform: translateX(-50%); }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) { .btn:active, .pad.down { transform: none; } }
+</style>
+
+<!-- title -->
+<section class="screen" id="title">
+  <h1>TAKEAWAY<br>FIGHTER</h1>
+  <p class="tag">Can't decide what's for tea? Let the food fight it out. Winner is dinner.</p>
+  <div class="roster" id="titleRoster" aria-hidden="true"></div>
+  <button class="btn" type="button" data-go="decide">DECIDE TONIGHT</button>
+  <button class="btn hot" type="button" data-go="pick">FIGHT</button>
+  <p class="hint">Phone on its side for the best fights.</p>
+  <button class="btn ghost install" type="button" id="installBtn" hidden>Add to home screen</button>
+</section>
+
+<!-- fighter select -->
+<section class="screen" id="pick" hidden>
+  <p class="stepper" id="pickStep">PICK YOUR FIGHTER</p>
+  <div class="roster" id="pickRoster"></div>
+  <div class="row">
+    <button class="btn ghost" type="button" data-go="title">Back</button>
+    <button class="btn ghost" type="button" id="randomOpp">CPU picks</button>
+    <button class="btn hot" type="button" id="startFight" disabled>FIGHT!</button>
+  </div>
+</section>
+
+<!-- tournament bracket -->
+<section class="screen" id="bracket" hidden>
+  <p class="stepper">TONIGHT'S TOURNAMENT</p>
+  <div class="bracket" id="bracketGrid"></div>
+  <p class="hint" id="bracketNote"></p>
+  <div class="row">
+    <button class="btn ghost" type="button" data-go="title">Back</button>
+    <button class="btn ghost" type="button" id="skipAll">Just tell me</button>
+    <button class="btn" type="button" id="nextFight">NEXT FIGHT</button>
+  </div>
+</section>
+
+<!-- fight -->
+<section class="screen" id="fight" hidden>
+  <canvas id="stage" width="960" height="540" aria-label="Fight"></canvas>
+  <div class="fighttop">
+    <button class="btn ghost" type="button" id="skipFight" hidden>Skip ▸</button>
+    <button class="btn ghost" type="button" id="quitFight">Quit</button>
+  </div>
+  <p class="hint turn">Turn your phone sideways for big fights ↻</p>
+  <div class="pads" id="pads">
+    <div class="dpad">
+      <span></span><button class="pad big" data-pad="up" aria-label="Jump">▲</button><span></span>
+      <button class="pad big" data-pad="left" aria-label="Left">◀</button><button class="pad b" data-pad="block">BLOCK</button><button class="pad big" data-pad="right" aria-label="Right">▶</button>
+    </div>
+    <div class="acts">
+      <button class="pad p" data-pad="punch">PUNCH</button><button class="pad k" data-pad="kick">KICK</button>
+      <button class="pad s" data-pad="special" style="grid-column: span 2">SPECIAL</button>
+    </div>
+  </div>
+</section>
+
+<!-- result -->
+<section class="screen" id="result" hidden>
+  <div class="result">
+    <div class="eyebrow">TONIGHT'S TAKEAWAY</div>
+    <canvas id="winPic" width="300" height="300" aria-hidden="true"></canvas>
+    <div class="shop" id="winShop"></div>
+    <div class="dish" id="winDish"></div>
+    <div class="line" id="winLine"></div>
+  </div>
+  <div class="row">
+    <button class="btn" type="button" data-go="decide">AGAIN</button>
+    <button class="btn ghost" type="button" data-go="title">Home</button>
+  </div>
+</section>
+
+<script src="game.js"></script>
+<script>
+(() => {
+  const TF = window.TakeawayFighter, $ = id => document.getElementById(id);
+  const screens = ['title', 'pick', 'bracket', 'fight', 'result'];
+  function show(id) { screens.forEach(s => { $(s).hidden = s !== id; }); }
+
+  function card(id, mini) {
+    const f = TF.BYID[id], c = document.createElement('button');
+    c.type = 'button'; c.className = 'card'; c.dataset.id = id;
+    const cv = document.createElement('canvas'); cv.width = 150; cv.height = 150; TF.portrait(cv, id);
+    c.appendChild(cv);
+    if (!mini) { const b = document.createElement('b'); b.textContent = f.name; const s = document.createElement('small'); s.textContent = f.shop; c.append(b, s); }
+    return c;
+  }
+  // title strip
+  TF.FIGHTERS.forEach(f => { const c = card(f.id, true); c.tabIndex = -1; $('titleRoster').appendChild(c); });
+
+  // ---------- fight mode: you vs the computer ----------
+  let me = null, them = null;
+  function buildPick() {
+    me = them = null; $('pickRoster').innerHTML = ''; $('pickStep').textContent = 'PICK YOUR FIGHTER'; $('startFight').disabled = true;
+    TF.FIGHTERS.forEach(f => $('pickRoster').appendChild(card(f.id)));
+  }
+  function refreshPick() {
+    document.querySelectorAll('#pickRoster .card').forEach(k => {
+      k.classList.toggle('pick', k.dataset.id === me); k.classList.toggle('pick2', k.dataset.id === them);
+      k.querySelector('.who')?.remove();
+      if (k.dataset.id === me || k.dataset.id === them) { const w = document.createElement('span'); w.className = 'who'; w.textContent = k.dataset.id === me ? 'YOU' : 'CPU'; k.appendChild(w); }
+    });
+    $('pickStep').textContent = them ? 'READY?' : me ? 'NOW PICK WHO YOU FIGHT' : 'PICK YOUR FIGHTER';
+    $('startFight').disabled = !(me && them);
+  }
+  $('pickRoster').addEventListener('click', e => {
+    const c = e.target.closest('.card'); if (!c) return; TF.sfx('whoosh');
+    if (!me || them) { me = c.dataset.id; them = null; }       // first tap (or a fresh start): your fighter
+    else if (c.dataset.id !== me) them = c.dataset.id;          // second tap: who you fight
+    refreshPick();
+  });
+  $('randomOpp').addEventListener('click', () => {
+    if (!me) me = TF.FIGHTERS[Math.floor(Math.random() * TF.FIGHTERS.length)].id;
+    const others = TF.FIGHTERS.filter(f => f.id !== me); them = others[Math.floor(Math.random() * others.length)].id;
+    TF.sfx('whoosh'); refreshPick();
+  });
+  $('startFight').addEventListener('click', () => {
+    show('fight'); $('skipFight').hidden = true;
+    TF.fight(me, them, { cpuA: false, cpuB: true, rounds: 1, time: 180, speed: 1, onEnd: w => showResult(w, w === me ? 'You won. Dinner is sorted.' : null) }); // one fight, three minutes
+  });
+
+  // ---------- decide tonight: an 8-fighter tournament ----------
+  let T = null;
+  function newTournament() {
+    T = { r0: TF.shuffle(TF.FIGHTERS.map(f => f.id)), r1: [], r2: [], champ: null, k: 0 };
+    drawBracket(); show('bracket');
+  }
+  function slot(id, cls) {
+    const d = document.createElement('div'); d.className = 'slot ' + (cls || '');
+    if (!id) { d.classList.add('tbd'); d.textContent = '?'; return d; }
+    const cv = document.createElement('canvas'); cv.width = 68; cv.height = 68; TF.portrait(cv, id);
+    const s = document.createElement('span'); s.textContent = TF.BYID[id].name; d.append(cv, s); return d;
+  }
+  function drawBracket() {
+    const gEl = $('bracketGrid'); gEl.innerHTML = '';
+    const rounds = [T.r0, T.r1, T.r2], sizes = [8, 4, 2];
+    rounds.forEach((r, ri) => {
+      const col = document.createElement('div'); col.className = 'col';
+      for (let i = 0; i < sizes[ri]; i++) {
+        const id = r[i], next = rounds[ri + 1], winner = ri === 2 ? T.champ : next && next[Math.floor(i / 2)];
+        const cls = winner ? (winner === id ? 'won' : 'out') : '';
+        col.appendChild(slot(id, id ? cls : ''));
+        if (i % 2 === 0) { const v = document.createElement('div'); v.className = 'vs'; v.textContent = 'VS'; col.appendChild(v); }
+      }
+      gEl.appendChild(col);
+    });
+    const m = nextMatch();
+    $('bracketNote').textContent = m ? `Next up: ${TF.BYID[m[0]].name} vs ${TF.BYID[m[1]].name}` : '';
+  }
+  function nextMatch() {
+    if (T.r1.length < 4) { const i = T.r1.length * 2; return [T.r0[i], T.r0[i + 1], 1]; }
+    if (T.r2.length < 2) { const i = T.r2.length * 2; return [T.r1[i], T.r1[i + 1], 2]; }
+    if (!T.champ) return [T.r2[0], T.r2[1], 3];
+    return null;
+  }
+  function record(w, round) { if (round === 1) T.r1.push(w); else if (round === 2) T.r2.push(w); else T.champ = w; }
+  $('nextFight').addEventListener('click', () => {
+    const m = nextMatch(); if (!m) return;
+    show('fight'); $('skipFight').hidden = false;
+    TF.fight(m[0], m[1], { cpuA: true, cpuB: true, rounds: 1, speed: 2, onEnd: w => { record(w, m[2]); afterMatch(); } });
+  });
+  function afterMatch() { if (T.champ) showResult(T.champ); else { drawBracket(); show('bracket'); } }
+  $('skipFight').addEventListener('click', () => { const mt = TF.match; if (!mt) return; const m = nextMatch(); TF.stop(); record(TF.quickWinner(m[0], m[1]), m[2]); afterMatch(); });
+  $('skipAll').addEventListener('click', () => { let m; while ((m = nextMatch())) record(TF.quickWinner(m[0], m[1]), m[2]); showResult(T.champ); });
+  $('quitFight').addEventListener('click', () => { TF.stop(); show(T && !T.champ ? 'bracket' : 'title'); });
+
+  // ---------- the answer ----------
+  const DISH = { butter: 'Butter chicken', prawn: 'Prawn pad Thai', block: 'Butter chicken', chook: 'Butter chicken', broc: 'Steamed broccoli', fried: 'Fried chicken', bigmac: 'Big Mac', nugget: 'Nuggets' };
+  function showResult(id, extra) {
+    const f = TF.BYID[id];
+    TF.portrait($('winPic'), id);
+    $('winShop').textContent = f.shop.toUpperCase();
+    $('winDish').textContent = DISH[id];
+    $('winLine').textContent = extra || f.win || 'Somehow.';
+    show('result'); TF.sfx('bell');
+  }
+
+  // ---------- nav + controls ----------
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-go]'); if (!b) return;
+    const go = b.dataset.go; TF.stop();
+    if (go === 'decide') newTournament(); else if (go === 'pick') { buildPick(); show('pick'); } else show(go);
+  });
+  const KEYMAP = { ArrowLeft: 'left', a: 'left', ArrowRight: 'right', d: 'right', ArrowUp: 'up', w: 'up', ' ': 'up', ArrowDown: 'block', s: 'block', j: 'punch', k: 'kick', l: 'special' };
+  addEventListener('keydown', e => { const k = KEYMAP[e.key]; if (k && TF.match) { e.preventDefault(); if (!e.repeat) TF.keys[k] = true; } });
+  addEventListener('keyup', e => { const k = KEYMAP[e.key]; if (k) TF.keys[k] = false; });
+  document.querySelectorAll('[data-pad]').forEach(b => {
+    const k = b.dataset.pad;
+    const on = e => { e.preventDefault(); TF.pad[k] = true; b.classList.add('down'); try { b.setPointerCapture(e.pointerId); } catch (_) {} if (navigator.vibrate) try { navigator.vibrate(12); } catch (_) {} };
+    const off = () => { if (['left', 'right', 'up', 'block'].includes(k)) TF.pad[k] = false; b.classList.remove('down'); };
+    b.addEventListener('pointerdown', on); b.addEventListener('pointerup', off); b.addEventListener('pointercancel', off); b.addEventListener('lostpointercapture', off);
+  });
+
+  const sizeTop = () => document.documentElement.style.setProperty('--stage-h', $('stage').getBoundingClientRect().height + 'px');
+  addEventListener('resize', sizeTop); new MutationObserver(sizeTop).observe($('fight'), { attributes: true });
+  TF.init($('stage'));
+  show('title');
+
+  // ---------- installable on Android: offline cache + an install button when Chrome offers one ----------
+  let deferred = null;
+  addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferred = e; $('installBtn').hidden = false; });
+  $('installBtn').addEventListener('click', async () => { if (!deferred) return; deferred.prompt(); try { await deferred.userChoice; } catch (_) {} deferred = null; $('installBtn').hidden = true; });
+  if ('serviceWorker' in navigator && location.protocol === 'https:') { navigator.serviceWorker.register('sw.js').catch(() => {}); }
+})();
+</script>
